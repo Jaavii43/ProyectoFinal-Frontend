@@ -1,0 +1,10 @@
+i.fa-brands.fa-user-lock:hover{
+    color: #C13584;
+}
+li.list-group-item{
+    background-color: rgb(35, 190, 118);
+    height: 2.5rem ; 
+}
+li.login{
+    border-bottom-left-radius: 10;
+}

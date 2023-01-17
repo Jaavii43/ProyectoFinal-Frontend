@@ -1,0 +1,18 @@
+/* Botones redes sociales*/
+i.fa-brands.fa-linkedin:hover{
+    color: blue;
+    }
+i.fa-brands.fa-facebook:hover{
+    color: blue;
+}
+i.fa-brands.fa-instagram:hover{
+    color: #C13584;
+}
+li.list-group-item{
+    background-color: rgb(35, 190, 118);
+    height: 2.5rem ;     
+}
+li.facebook{
+    border-top-right-radius:0% !important;
+    border-bottom-right-radius: 0%;}
+/* Fin Botones redes sociales*/
