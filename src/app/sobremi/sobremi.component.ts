@@ -9,17 +9,14 @@ import { SobremiService } from '../services/sobremi.service';
 })
 export class SobremiComponent implements OnInit {
 
-  sobremi: Sobremi = new Sobremi("","","");
+  sobremi: Sobremi = new Sobremi("","","","");
   
-  constructor(public SobremiService: SobremiService)
-    //inyectar el servicio para tener acceso en la clase a los metodos
+  constructor(public SobremiService: SobremiService){
 
-    { }
-
-  // Esto es para almacenar en la variable instancia los datos recuperados por el servicio  
-    ngOnInit(): void {
-
+   }
+  ngOnInit(): void {
+        this.SobremiService.getSobremi().subscribe(data=>{this.sobremi=data})
       };
   }
 
-}
+
