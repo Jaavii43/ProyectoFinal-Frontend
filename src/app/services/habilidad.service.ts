@@ -7,7 +7,7 @@ import { Habilidade } from '../model/habilidade';
   providedIn: 'root'
 })
 export class HabilidadService {
-  URL : 'http://localhost:8080/habilidad/'; 
+  URL = 'http://localhost:8080/habilidad/'; 
   
   constructor(private httpClient:HttpClient) { }
 

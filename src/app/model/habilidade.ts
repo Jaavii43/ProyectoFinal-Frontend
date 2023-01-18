@@ -1,6 +1,6 @@
 export class Habilidade {
 
-    id:number;
+    id?:number;
     area:string;
     porcentaje:number;  
 
