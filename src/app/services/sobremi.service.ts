@@ -7,12 +7,12 @@ import { Sobremi } from '../model/sobremi';
   providedIn: 'root'
 })
 export class SobremiService {
-  URL = "http://localhost:8080/sobremi"
+  URL = "http://localhost:8080/sobremi/"
   
   constructor(private http: HttpClient) { }
 
   public getSobremi():Observable<Sobremi>{
-    return this.http.get<Sobremi>(this.URL+'/traer/ver');
+    return this.http.get<Sobremi>(this.URL+'traer/ver');
 
   }
 }

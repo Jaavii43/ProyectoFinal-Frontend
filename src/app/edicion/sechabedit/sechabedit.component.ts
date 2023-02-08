@@ -23,13 +23,7 @@ export class SechabeditComponent implements OnInit {
   delete(id:number){
     if(id != undefined){
       this.habilidadservice.delete(id).subscribe(
-        data=>{
-          this.cargarHabilidad();
-      },
-       err=>{
-        alert("No se pudo eliminar la Habilidad");
-      })
-  }
-
-
+        data=>{this.cargarHabilidad( );},err=>{alert("No se pudo eliminar la Habilidad")})
+        }
+  }   
 }
