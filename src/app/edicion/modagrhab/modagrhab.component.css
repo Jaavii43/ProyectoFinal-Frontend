@@ -1,0 +1,8 @@
+form {
+    background-color: rgb(32, 18, 224); 
+    text-align: left;
+}
+
+div.fade:not(.show) {
+    opacity: 50;
+}

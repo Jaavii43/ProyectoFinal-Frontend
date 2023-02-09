@@ -4,6 +4,7 @@ import { DashboardComponent } from './edicion/dashboard.component';
 import { ErrorComponent } from './error/error.component';
 import { IntroComponent } from './intro/intro.component';
 
+
 const routes: Routes = [
   {path: 'intro', component:IntroComponent},
   {path: 'dashboard', component:DashboardComponent},
@@ -12,7 +13,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes), ],
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

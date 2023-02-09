@@ -33,7 +33,8 @@ import { ModagrproyComponent } from './edicion/modagrproy/modagrproy.component';
 import { ModeagrestComponent } from './edicion/modeagrest/modeagrest.component';
 import { BotonagregarproyComponent } from './edicion/botonagregarproy/botonagregarproy.component';
 import { BotonagrhabComponent } from './edicion/botonagrhab/botonagrhab.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
  
 
 @NgModule({
@@ -75,6 +76,8 @@ import { BotonagrhabComponent } from './edicion/botonagrhab/botonagrhab.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
