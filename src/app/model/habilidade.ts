@@ -1,13 +1,14 @@
 export class Habilidade {
 
-    id:number;
+    id:any;
     area:string;
     porcentaje:number;  
 
-    constructor(area:string, porcentaje:number, id:number){
+    constructor(area:string, porcentaje:number){
 
         this.area = area;
         this.porcentaje = porcentaje;
-        this.id=id;
+        
+        
     }
 }

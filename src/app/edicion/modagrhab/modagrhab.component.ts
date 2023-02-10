@@ -11,46 +11,52 @@ import { HabilidadService } from 'src/app/services/habilidad.service';
 })
 export class ModagrhabComponent implements OnInit {
 
-  [x: string]: any;
   form: FormGroup;
-  habilidad: Habilidade []=[];
+  area: '' = "";
+  porcentaje: 0 = 0;
+  
 
 
   constructor(private formBuilder: FormBuilder, public habilidadservice:HabilidadService) {
-
+    
     this.form = this.formBuilder.group({
-      id: [''],
-      area:  ['', [Validators.required]],
+      area: ['', [Validators.required]],
       porcentaje: ['', [Validators.required, Validators.min(0), Validators.max(100)]],
       })
    }
 
   ngOnInit(): void {
-    this.cargarHabilidad();
+    
   }
 
-  cargarHabilidad(): void {
-    this.habilidadservice.list().subscribe(
-      data => {
-        this.habilidad = data;
-      }
-    )
+  get Habilidad(){
+    return this.form.get("area");
   }
 
-  cargarDetalle(id: number) {
-    this.habilidadservice.detail(id).subscribe(
-      {
-        next: (data) => {
-          this.form.setValue(data);
-        },
-        error: (e) => {
-          console.error(e)
-          alert("error al modificar")
-        },
-        complete: () => console.info('complete aqui')
-      }
-    )
+  get Porcentaje(){
+    return this.form.get("porcentaje");
   }
 
+  get HabilidadValid(){
+    return this.Habilidad?.touched && !this.Habilidad.valid;
+  }
+
+  get PorcentajeValid(){
+    return this.Porcentaje?.touched && !this.Porcentaje.valid;
+  }
+
+  onCreate():void{
+    const habi =new Habilidade(this.area, this.porcentaje);
+    this.habilidadservice.save(habi).subscribe(data=>{alert("Habilidad creada");
+    window.location.reload();
+  }, err=>{
+      alert("Fallo Creacion");
+      this.form.reset();
+    });
+  }
+
+  limpiar():void{
+    this.form.reset();
+  }
 
 }
