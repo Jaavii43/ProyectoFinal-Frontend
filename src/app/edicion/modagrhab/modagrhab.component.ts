@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { window } from 'rxjs';
 import { Habilidade } from 'src/app/model/habilidade';
 import { HabilidadService } from 'src/app/services/habilidad.service';
 
@@ -47,12 +48,9 @@ export class ModagrhabComponent implements OnInit {
 
   onCreate():void{
     const habi =new Habilidade(this.area, this.porcentaje);
-    this.habilidadservice.save(habi).subscribe(data=>{alert("Habilidad creada");
-    window.location.reload();
-  }, err=>{
-      alert("Fallo Creacion");
-      this.form.reset();
-    });
+    this.habilidadservice.save(habi).subscribe(
+      data=>{alert("Habilidad creada"); location.reload();}, 
+        err=>{alert("Fallo Creacion"); this.form.reset();});
   }
 
   limpiar():void{
