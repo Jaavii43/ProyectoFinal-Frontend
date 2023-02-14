@@ -9,22 +9,22 @@
             <app-botonagrhab></app-botonagrhab>
           </div>
       </div>
-      <div class="row" *ngFor="let habilidade of habilidad">
-          <div class="col-12 mb-2">
+      <div class="row" >
+          <div class="col-3 mb-2 "  *ngFor="let habilidade of habilidad" >
               <div class="progress-circle-container">
                   <div class="row">
-                        <div class="col-2">
+                        <div class="col-12">
                           <div class="progress-circle progress-{{habilidade.area}}">
                               <span>{{habilidade.area}}</span>
                           </div>
                         </div>
                         <div class="row">
-                            <div class="col-2">
+                            <div class="col-12">
                                 <span>{{habilidade.porcentaje}}</span>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-2 botones">
+                            <div class="col-12 botones">
                                 <button type="button" data-bs-toggle ="modal" data-bs-targt="#habmodedicion"
                                 class="btn btn-close-black">
                                 <i class="fa-solid fa-eraser" (click)="delete(habilidade.id)"></i>
