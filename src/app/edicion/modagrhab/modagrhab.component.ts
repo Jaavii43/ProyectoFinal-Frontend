@@ -49,8 +49,11 @@ export class ModagrhabComponent implements OnInit {
   onCreate():void{
     const habi =new Habilidade(this.area, this.porcentaje);
     this.habilidadservice.save(habi).subscribe(
-      data=>{alert("Habilidad creada"); location.reload();}, 
-        err=>{alert("Fallo Creacion"); this.form.reset();});
+      data=>{alert("Habilidad creada");
+        location.reload();}, 
+        err=>{alert("Fallooooo Creacion"); 
+          this.form.reset();}
+        );
   }
 
   limpiar():void{
