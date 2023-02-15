@@ -14,7 +14,7 @@
               <div class="progress-circle-container">
                   <div class="row">
                         <div class="col-12">
-                          <div class="progress-circle progress-{{habilidade.area}}">
+                          <div class="progress-circle progress-{{habilidade.porcentaje}}">
                               <span>{{habilidade.area}}</span>
                           </div>
                         </div>
@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 botones">
+                            <div class="col-12">
                                 <button type="button" data-bs-toggle ="modal" data-bs-targt="#habmodedicion"
                                 class="btn btn-close-black">
                                 <i class="fa-solid fa-eraser" (click)="delete(habilidade.id)"></i>
