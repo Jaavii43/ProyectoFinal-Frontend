@@ -35,6 +35,7 @@ import { BotonagregarproyComponent } from './edicion/botonagregarproy/botonagreg
 import { BotonagrhabComponent } from './edicion/botonagrhab/botonagrhab.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgCircleProgressModule } from 'ng-circle-progress';
  
 
 @NgModule({
@@ -77,7 +78,20 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule    
+    ReactiveFormsModule,
+        // Specify ng-circle-progress as an import
+        NgCircleProgressModule.forRoot({
+          // set defaults here
+          "outerStrokeWidth": 12,
+          "innerStrokeWidth": 8,
+          "outerStrokeColor": "#4882c2", 
+          "innerStrokeColor": "#e7e8ea",
+          "animation": true,
+          "animationDuration": 600,
+          "subtitleFontSize": '12',
+          "radius": 60
+          
+                })    
   ],
   providers: [],
   bootstrap: [AppComponent]

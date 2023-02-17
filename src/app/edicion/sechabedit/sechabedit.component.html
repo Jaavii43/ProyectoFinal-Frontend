@@ -1,5 +1,5 @@
 <!-- Section habilidades -->
-<section id="habili" class="habili">
+<section id="habili" class="habilidades">
     <div class="container  pb-2">
       <div class="row">
           <div class="col-10 mt-3 text-left">
@@ -10,18 +10,14 @@
           </div>
       </div>
       <div class="row" >
-          <div class="col-3 mb-2 "  *ngFor="let habilidade of habilidad" >
+          <div class="col-3 mb-2 " *ngFor="let habilidade of habilidad" >
               <div class="progress-circle-container">
                   <div class="row">
-                        <div class="col-12">
-                          <div class="progress-circle progress-{{habilidade.porcentaje}}">
-                              <span>{{habilidade.area}}</span>
-                          </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <span>{{habilidade.porcentaje}}</span>
-                            </div>
+                        <div class="col-12">                          
+                            <circle-progress
+                            [percent]="habilidade.porcentaje"
+                            [subtitle]="habilidade.area"
+                          ></circle-progress>
                         </div>
                         <div class="row">
                             <div class="col-12">
@@ -35,6 +31,7 @@
                 </div>
             </div>
         </div>
+
         </div>
   </section>
 <!-- Fin Section habilidades -->
