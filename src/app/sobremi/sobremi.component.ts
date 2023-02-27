@@ -9,7 +9,7 @@ import { SobremiService } from '../services/sobremi.service';
 })
 export class SobremiComponent implements OnInit {
 
-  sobremi: Sobremi = new Sobremi("","","","");
+  sobremi: Sobremi = new Sobremi("","","","","","");
   
   constructor(public SobremiService: SobremiService){
 

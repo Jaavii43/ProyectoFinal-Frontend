@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -36,6 +36,9 @@ import { BotonagrhabComponent } from './edicion/botonagrhab/botonagrhab.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { SobremiService } from './services/sobremi.service';
+import { InterceptorService } from './services/interceptor.service';
+
  
 
 @NgModule({
@@ -80,7 +83,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     FormsModule,
     ReactiveFormsModule,
         // Specify ng-circle-progress as an import
-        NgCircleProgressModule.forRoot({
+    NgCircleProgressModule.forRoot({
           // set defaults here
           "outerStrokeWidth": 12,
           "innerStrokeWidth": 8,
@@ -93,7 +96,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
           
                 })    
   ],
-  providers: [],
+  providers: [SobremiService, { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

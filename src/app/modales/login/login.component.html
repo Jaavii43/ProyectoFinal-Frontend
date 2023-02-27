@@ -1,25 +1,24 @@
-  <!-- Modal -->
-  <section class="login">
+<section class="login">
     <div class="container text-center mt-1">
         <div class="row">
             <div class="col-2">
             </div>
 
             <div class="col-8 formulario-login">
-                <form [formGroup]="form" name="loginform" (ngSubmit)="onEnviar($event)">
+                <form name="loginform" (ngSubmit)="onEnviar($event)">
                     <div class="modal-body">
                         <div class="row">
                             <label for="email" class="col-sm-10 col-form-label">Email</label>
                             <div class="col-sm-10">
-                                <!--input type="text" class="form-control" id="staticEmail"-->
                                 <input type="email" pattern="[^ @]*@[^ @]*" formControlName="email" class="form-control"
-                                    [(ngModel)]="email" [ngClass]="{'is-invalid': form.get('email').errors && Email.touched, 'is-valid': !Email.errors && Email.touched}"
+                                    [(ngModel)]="sobremi.email"
+                                    [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}"
                                     id="email" value="">
-                                <div *ngIf="Email.errors && Email.touched">
-                                    <p *ngIf="Email.hasError('required')" class="text-white">
+                                <div *ngIf="Email?.errors && Email?.touched">
+                                    <p *ngIf="Email?.hasError('required')" class="text-white">
                                         Ingrese su email!!!!!
                                     </p>
-                                    <p *ngIf="Email.hasError('email')" class="text-white">
+                                    <p *ngIf="Email?.hasError('email')" class="text-white">
                                         Ingrese un email valido!!!
                                     </p>
                                 </div>
@@ -30,14 +29,14 @@
                             <div class="col-sm-10">
                                 <!--input type="password" class="form-control" id="inputPassword"-->
                                 <input type="password" formControlName="clave" class="form-control"
-                                    [(ngModel)]="persona.clave"
-                                    [ngClass]="{'is-invalid': Clave.errors && Clave.touched, 'is-valid': !Clave.errors && Clave.touched}"
+                                    [(ngModel)]="sobremi.clave"
+                                    [ngClass]="{'is-invalid': Clave?.errors && Clave?.touched, 'is-valid': !Clave?.errors && Clave?.touched}"
                                     id="clave">
-                                <div *ngIf="Clave.errors && Clave.touched">
-                                    <p *ngIf="Clave.hasError('required')" class="text-white">
+                                <div *ngIf="Clave?.errors && Clave?.touched">
+                                    <p *ngIf="Clave?.hasError('required')" class="text-white">
                                         La contraseña es requerida!!!
                                     </p>
-                                    <p *ngIf="Clave.hasError('minLength(8)')" class="text-white">
+                                    <p *ngIf="Clave?.hasError('minLength(8)')" class="text-white">
                                         La contraseña debe tener al menos caracteres!!!
                                     </p>
                                 </div>
@@ -58,4 +57,3 @@
         </div>
     </div>
 </section>
-  <!-- Fin Modal -->

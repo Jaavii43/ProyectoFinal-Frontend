@@ -3,10 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './edicion/dashboard.component';
 import { ErrorComponent } from './error/error.component';
 import { IntroComponent } from './intro/intro.component';
+import { LoginComponent } from './modales/login/login.component';
+
 
 
 const routes: Routes = [
   {path: 'intro', component:IntroComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'dashboard', component:DashboardComponent},
   {path: '', redirectTo:'/intro', pathMatch:'full'},
   {path: '**', component:ErrorComponent}
