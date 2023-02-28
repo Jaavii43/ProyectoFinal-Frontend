@@ -19,24 +19,24 @@
              <div class="mb-3">
               <label for="area" class="form-label">Nombre de la Habilidad</label>
               <input type="text" class="form-control" id="area" placeholder="campo obligatorio" formControlName="area" [(ngModel)]="area" 
-              [ngClass]="{'is-invalid': form.get('area')?.errors && form.get('area')?.touched, 'is-valid': !form.get('area')?.errors && form.get('area')?.touched}">
+              [ngClass]="{'is-invalid': form.get('area').errors && form.get('area').touched, 'is-valid': !form.get('area').errors && form.get('area').touched}">
               <p class="text-danger"
-                *ngIf="form.get('area')?.touched && form.get('area')?.errors?.['required']">
+                *ngIf="form.get('area').touched && form.get('area').errors?.['required']">
                   El Nombre de la Habilidad es requerida!
                 </p>
               </div>
             <div class="mb-3">
               <label for="porcentaje" class="form-label">Valor entre 1 y 100 de la Habilidad:  </label>
               <input type="number" min="0" max="100" id="habilidad" formControlName="porcentaje" [(ngModel)]="porcentaje"
-              [ngClass]="{'is-invalid': form.get('porcentaje')?.errors && form.get('porcentaje')?.touched, 'is-valid': !form.get('porcentaje')?.errors && form.get('porcentaje')?.touched}">
+              [ngClass]="{'is-invalid': form.get('porcentaje').errors && form.get('porcentaje').touched, 'is-valid': !form.get('porcentaje').errors && form.get('porcentaje').touched}">
               <p class="text-danger"
-                *ngIf="form.get('porcentaje')?.touched && form.get('porcentaje')?.errors?.['required']">
+                *ngIf="form.get('porcentaje').touched && form.get('porcentaje')?.errors?.['required']">
                   El Porcentaje es requerido!
                 </p>
-                <p *ngIf="form.get('porcentaje')?.hasError('min')" class="text-danger">
+                <p *ngIf="form.get('porcentaje').hasError('min')" class="text-danger">
                   El Porcentaje mínimo debe ser mayor a 1!
                 </p>
-                <p *ngIf="form.get('porcentaje')?.hasError('max')" class="text-danger">
+                <p *ngIf="form.get('porcentaje').hasError('max')" class="text-danger">
                   El Porcentaje  máximo es 100!
                 </p>
               </div>

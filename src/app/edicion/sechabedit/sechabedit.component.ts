@@ -20,10 +20,14 @@ export class SechabeditComponent implements OnInit {
     this.habilidadservice.list().subscribe(data =>(this.habilidad=data))
   }
 
-  delete(id:number){
-    if(id != undefined){
+  delete(id:number){    
       this.habilidadservice.delete(id).subscribe(
-        bd=>{this.cargarHabilidad();},err=>{alert("No se pudo eliminar la Habilidad")})
+        bd=>{
+          this.cargarHabilidad()
+        },
+        err=>{
+          alert("No se pudo eliminar la Habilidad")
+        })
         }
-  }   
+     
 }
