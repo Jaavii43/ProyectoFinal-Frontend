@@ -61,7 +61,7 @@ export class LoginComponent implements OnInit{
         // alert("hola" + data.id);
         if (bd.id) {
           alert("O J O , O J O !!!        ...  ahora vas a poder EDITAR TU PORTFOLIO");
-          this.ruta.navigate(['/panel']);
+          this.ruta.navigate(['/dashboard']);
         } else {
           alert("ACCESO INCORRECTO");
           alert("error al iniciar sesion");
@@ -75,7 +75,7 @@ export class LoginComponent implements OnInit{
       sessionStorage.setItem('currentUser', 'null');
       alert("ESTAS ERRANDO!!!");
       alert( "mejor seguí visitando la página!")
-      this.ruta.navigate(['/']);
+      this.ruta.navigate(['/intro']);
     }
   }
 }
