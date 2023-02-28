@@ -5,7 +5,7 @@
             </div>
 
             <div class="col-8 formulario-login">
-                <form name="loginform" (ngSubmit)="onEnviar($event)">
+                <form [formGroup]="form"   name="loginform" (ngSubmit)="onEnviar($event)">
                     <div class="modal-body">
                         <div class="row">
                             <label for="email" class="col-sm-10 col-form-label">Email</label>

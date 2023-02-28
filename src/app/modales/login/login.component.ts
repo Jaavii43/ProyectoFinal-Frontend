@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    sessionStorage.setItem('currentUser', null);
+    sessionStorage.setItem('currentUser', 'null');
   }
 
   get Email() {
@@ -72,7 +72,7 @@ export class LoginComponent implements OnInit{
       })
 
     } else {
-      sessionStorage.setItem('currentUser', null);
+      sessionStorage.setItem('currentUser', 'null');
       alert("ESTAS ERRANDO!!!");
       alert( "mejor seguí visitando la página!")
       this.ruta.navigate(['/']);
