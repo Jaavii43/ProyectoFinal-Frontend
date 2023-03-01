@@ -9,19 +9,19 @@ import { AutenticationService } from './autentication.service';
 export class GuardGuard implements CanActivate {
   constructor(private autenticacionServicio: AutenticationService, private rutas: Router){
   }
+  //Esto es lo que bloquea la pagina sin login despues se pone en el routing
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     let currentUser = this.autenticacionServicio.usuarioAutenticado;
 
     if(currentUser && currentUser.id){
-      this.rutas.navigate(['/dashboard'])
+      // this.rutas.navigate(['/dashboard'])
       return true;
     }
     else{
       this.rutas.navigate(['/intro'])
-      return false;
-      
+      return false;      
     }
   }
 }

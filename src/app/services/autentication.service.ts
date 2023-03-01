@@ -18,11 +18,11 @@ export class AutenticationService {
     var httpOptions={headers:new HttpHeaders({
       'Content-Type':'application/json'
     })}
-    return this.http.post<any>(this.url, credenciales, httpOptions).pipe(map(bd => {
-    sessionStorage.setItem('currentUser',JSON.stringify(bd));
-    this.currentUserSubject.next(bd);
-    console.log("Servicio esta corriendo" + JSON.stringify(bd));
-    return bd
+    return this.http.post<any>(this.url, credenciales, httpOptions).pipe(map(data => {
+    sessionStorage.setItem('currentUser',JSON.stringify(data));
+    this.currentUserSubject.next(data);
+    console.log("Servicio esta corriendo" + JSON.stringify(data));
+    return data
     }));
   }
 

@@ -20,7 +20,7 @@ export class HabilidadService {
   }
 
   public delete(id:number) : Observable<any>{
-    return this.httpClient.delete<any>(this.URL + 'delete' + id);
+    return this.httpClient.delete<any>(this.URL + `delete/` + id);
   }
 
  public save(Habilidad: Habilidade) : Observable<any>{

@@ -5,9 +5,9 @@
             <div class="col-12 mt-3 text-left">
             <h2><b>Expericencias Laborales</b></h2>
             </div>
-            <div class="experiencia1">
+            <div class="experiencia" *ngFor="let trabajos of trabajo">
                 <div class="row">
-                    <h3><b style="letter-spacing: 0px;">Gervasoni Ingenieria</b></h3>
+                    <h3><b style="letter-spacing: 0px;">{{trabajos.empresa}}</b></h3>
                 </div>
                 <div class="row" >  
                     <div class="col-9 ">
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <h3><b style="letter-spacing: 0px;"><span style="font-size: 15px;">Marzo 2004 - Presente</span></b></h3>
+                        <h3><b style="letter-spacing: 0px;"><span style="font-size: 15px;">{{trabajos.fecha_inicio}} - {{trabajos.fecha_fin}}</span></b></h3>
                     </div>
                 </div>
             </div>
@@ -64,8 +64,9 @@
                 <h3><b style="letter-spacing: 0px;"><span style="font-size: 15px;">Enero 1997</span></b></h3>
                 </div>
                 </div>
-            </div>
+            </div> 
             <!-- Termina el contenido-->
+        
         </div>       
     </div>    
   </section>

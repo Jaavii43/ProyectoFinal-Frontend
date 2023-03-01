@@ -58,12 +58,13 @@ export class LoginComponent implements OnInit{
       console.log(JSON.stringify(this.form.value));
       this.autService.loginPersona(this.form.value).subscribe(bd => {
         console.log("DATA:" + JSON.stringify(bd.id));
-        // alert("hola" + data.id);
+        
         if (bd.id) {
-          alert("O J O , O J O !!!        ...  ahora vas a poder EDITAR TU PORTFOLIO");
+          alert("podes EDITAR TU PORTFOLIO");
+          //window.location.reload();
           this.ruta.navigate(['/dashboard']);
         } else {
-          alert("ACCESO INCORRECTO");
+          
           alert("error al iniciar sesion");
         }
 
@@ -74,7 +75,6 @@ export class LoginComponent implements OnInit{
     } else {
       sessionStorage.setItem('currentUser', 'null');
       alert("ESTAS ERRANDO!!!");
-      alert( "mejor seguí visitando la página!")
       this.ruta.navigate(['/intro']);
     }
   }

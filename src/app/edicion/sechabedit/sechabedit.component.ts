@@ -22,11 +22,11 @@ export class SechabeditComponent implements OnInit {
 
   delete(id:number){    
       this.habilidadservice.delete(id).subscribe(
-        bd=>{
-          this.cargarHabilidad()
+        bd => {          
         },
-        err=>{
-          alert("No se pudo eliminar la Habilidad")
+        () => {
+          alert("Se elimino la Habilidad")
+          this.cargarHabilidad()
         })
         }
      

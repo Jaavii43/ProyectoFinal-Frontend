@@ -1,6 +1,6 @@
 export class Sobremi {
 
-    id?:number;
+    id:number;
     nombre:String;
     posicion:String;
     descripcion:String;
