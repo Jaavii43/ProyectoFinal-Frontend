@@ -1,19 +1,19 @@
 <section id="educacion" class="educacion">
-    <div class="container pt-3">
-        <div class="tituloSeccion">
-            <div class="row text-left">
-            <h2>Estudios Cursados</h2>
-            </div>
-        </div>
-        <div class="cursado" *ngFor="let educacion of educa">
-                <div class="row">
+    <div class="container pb-2">
+      <div class="row">
+              <div class="col-12 mt-3 text-left">
+              <h2><b>Estudios Cursados</b></h2>
+              </div>
+      </div>
+      <div class="cursado" *ngFor="let educacion of educa">
+        <div class="row">
                   <h3><b style="letter-spacing: 0px;"><span style="font-size: 25px;">{{educacion.escuela}}</span></b></h3>
                   <h3><b style="letter-spacing: 0px;"><span style="font-size: 20px;">{{educacion.descripcion}}</span></b></h3>
-                </div>
-                <div class="row" >  
-                  <h3><b style="color: inherit; letter-spacing: 0px;"><span style="font-size: 18px;">{{educacion.titulo}}</span></b></h3>
-                  <h3><b style="color: inherit; letter-spacing: 0px;"><span style="font-size: 18px;">{{educacion.fecha_inicio}} - {{educacion.fecha_fin}}</span></b></h3>                
-                </div>
+        </div>
+        <div class="row" >  
+          <h3><b style="color: inherit; letter-spacing: 0px;"><span style="font-size: 18px;">{{educacion.titulo}}</span></b></h3>
+          <h3><b style="color: inherit; letter-spacing: 0px;"><span style="font-size: 18px;">{{educacion.fecha_inicio}} - {{educacion.fecha_fin}}</span></b></h3>                
+        </div>
             <hr>
         </div>
       </div>
