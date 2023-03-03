@@ -11,6 +11,6 @@ export class Trabajos {
         this.empresa = empresa;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
-        this.empresa = empresa;
+        this.trabajo = trabajo;
     }
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { window } from 'rxjs';
 import { Habilidade } from 'src/app/model/habilidade';
 import { HabilidadService } from 'src/app/services/habilidad.service';
 
