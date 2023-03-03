@@ -16,7 +16,7 @@ export class EstudiosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-   cargarEducacion():void{
+  cargarEducacion():void{
     this.educacionservice.list().subscribe(data =>(this.educa=data))
   }
 

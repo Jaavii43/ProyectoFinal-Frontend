@@ -11,53 +11,25 @@
             </div>
         </div>
         </div>
-        <div class="cursado1">
-                <div class="row">
-                    <div class="col-9">
-                        <h3><b style="letter-spacing: 0px;"><span style="font-size: 25px;">Escuela secundaria</span></b></h3>
-                        <h3><b style="letter-spacing: 0px;"><span style="font-size: 20px;">Escuela Dr Nicolas Avellaneda</span></b></h3>
-                    </div>
-                    <div class="col-3">
-                        <app-botonesedicion></app-botonesedicion>
-                    </div>
-                </div>
-                <div class="row" >  
-                        <h3><b style="color: inherit; letter-spacing: 0px;"><span style="font-size: 18px;">Tecnico en Electronica</span></b></h3>
-                        <h3><b style="color: inherit; letter-spacing: 0px;"><span style="font-size: 18px;">1991 - 1997</span></b></h3>
-                              
-                </div>
-        </div>
-        <hr>    
-        <div class="cursado2">
-            <div class="row cursado2">
-                <div class="col-9">
-                    <h3><b style="letter-spacing: 0px;"><span style="font-size: 25px;">Escuela primaria</span></b><br></h3>
-                    <h3><b style="letter-spacing: 0px;"><span style="font-size: 20px;"></span>Escuela Amenabar</b></h3>
-                </div>
-                <div class="col-3">
-                    <app-botonesedicion></app-botonesedicion>
-                </div>
-            </div>
+        <div class="cursado" *ngFor="let educacion of educa">
             <div class="row">
-                    <h3><b style="color: inherit; letter-spacing: 0px;"><span style="font-size: 18px;">Cursado 7° Grado</span></b></h3>
-                    <h3><b style="color: inherit; letter-spacing: 0px;"><span style="font-size: 18px;">1996</span></b></h3>
-            </div>
-        </div>
-        <hr>    
-        <div class="cursado3">
-                <div class="row">
-                <div class="col-9">
-                    <h3><b style="color: inherit; letter-spacing: 0px;">Argentina Programa</b></h3>
-                </div>
+                <div class="col-9">      
+                    <h3><b style="letter-spacing: 0px;"><span style="font-size: 25px;">{{educacion.escuela}}</span></b></h3>
+                    <h3><b style="letter-spacing: 0px;"><span style="font-size: 20px;">{{educacion.descripcion}}</span></b></h3>
+                </div>      
                 <div class="col-3">
-                    <app-botonesedicion></app-botonesedicion>
-                </div>
-                </div>
-                <div class="row">
-                    <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">Primera Etapa Argentina Programa</span></b></h3>
-                    <h3><b style="letter-spacing: 0px;"><span style="font-size: 15px;">11 de Junio 2022</span></b></h3>
-                </div>
-        </div>
+                    <button type="button" class="btn btn-close-black">
+                       <i class="fa-solid fa-eraser" (click)="delete(educacion.id)"></i>
+                    </button>
+                </div>                    
+            </div>
+            <div class="row" >  
+              <h3><b style="color: inherit; letter-spacing: 0px;"><span style="font-size: 18px;">{{educacion.titulo}}</span></b></h3>
+              <h3><b style="color: inherit; letter-spacing: 0px;"><span style="font-size: 18px;">{{educacion.fecha_inicio}} - {{educacion.fecha_fin}}</span></b></h3>                
+            </div>
+                <hr>
+            </div>   
+
     </div>
 </section>
   <!-- Fin Seccion Educacion -->

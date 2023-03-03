@@ -8,7 +8,7 @@ import { Proyectos } from '../model/proyectos';
 })
 export class ProyectosService {
 
-  URL = "http://localhost:8080/proyectos"
+  URL = "http://localhost:8080/proyectos/"
   constructor(private httpClient:HttpClient) { }
 
   public list():Observable<Proyectos[]>{
