@@ -9,15 +9,16 @@ import { EducacionService } from 'src/app/services/educacion.service';
 })
 export class SecedueditComponent implements OnInit {
 
-  educa: Educacion[]=[];
+  educar: Educacion[]=[];
   
   constructor(public educacionservice:EducacionService) { }
 
   ngOnInit(): void {
+    this.cargarEducacion();
   }
 
   cargarEducacion():void{
-    this.educacionservice.list().subscribe(data =>(this.educa=data))
+    this.educacionservice.list().subscribe(data =>(this.educar=data))
   }
 
   delete(id:number){    
@@ -25,7 +26,7 @@ export class SecedueditComponent implements OnInit {
       bd => {          
       },
       () => {
-        alert("Se elimino la Habilidad")
+        alert("Se elimino la educacion")
         this.cargarEducacion()
       })
       }

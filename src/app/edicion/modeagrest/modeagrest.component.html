@@ -1,31 +1,67 @@
-<div class="modal fade" id="modagrest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="ModalAgregarEstudio" tabindex="-1" aria-labelledby="ModalAgregarEstudio">
     <div class="modal-dialog">
       <div class="modal-content">
-        <form>
-            <div class="agregarHabilidad">
-                Nuevo Estudio
-            </div>
-            <div class="cambionombre">
-                Donde se realizo<textarea class="form-control" id="textest" rows="2"></textarea>
-            </div>
-            <div class="cambiofecha">
-            Fecha de inicio<input type="date" id="start" name="trip-start"
-                value="2018-07-22"
-                min="2018-01-01" max="2018-12-31">
-            </div>
-            <div class="cambiofechafin">
-                Fecha de finalizacion<input type="date" id="start" name="trip-start"
-                    value="2018-07-22"
-                    min="2018-01-01" max="2018-12-31">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" >Nuevp curso o estudio realizado</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
+          </div>
+        
+        <form [formGroup]="form" name="educaciomform" (ngSubmit)="form.valid && onCreate()">
+          
+            <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
+                <div class="input-group-prepend border-0">
+                  <span class="input-group-text border-0" id="basic-addon1">ID:</span>
                 </div>
-            <div class="descripcion">
-                Descripcion del estudio<textarea class="form-control" id="descripEstudio" rows="3"></textarea>
+                    <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
+            </div>
+
+            <div class="mb-3">
+            <label for="empresa" class="form-label">Esteblecimiento educativo</label>
+            <input type="text" class="form-control" id="escuela" placeholder="campo obligatorio" formControlName="escuela" [(ngModel)]="escuela"
+                [ngClass]="{'is-invalid': form.get('escuela')?.errors && form.get('escuela')?.touched, 'is-valid': form.get('escuela')?.errors && form.get('escuela')?.touched}">
+            <p class="text-danger" *ngIf="form.get('escuela')?.touched && form.get('escuela')?.errors?.['required']">
+                El Nombre del establecimiento es requerido.
+            </p>
+        </div>
+          <div class="fecha_inicio">
+          Fecha de inicio<input type="date" class="form-control" id="fecha_inicio" name="trip-start" formControlName="fecha_inicio"
+              value="2018-07-22" min="2018-01-01" max="2018-12-31" [(ngModel)]="fecha_inicio">
+          </div>
+          <div class="fecha_fin">
+              Fecha de finalizacion<input type="date" class="form-control" id="fecha_fin" name="trip-start" formControlName="fecha_fin"
+                  value="2018-07-22" min="2018-01-01" max="2018-12-31" [(ngModel)]="fecha_fin">
+            </div>
+            <div class="mb-3">
+                <label for="TituloAdquirido" class="form-label">Titulo adquirido</label>
+                <textarea class="form-control" id="titulo" placeholder="campo obligatorio" [(ngModel)]="titulo"
+                    formControlName="titulo"
+                    [ngClass]="{'is-invalid': form.get('titulo')?.errors && form.get('titulo')?.touched, 
+                    'is-valid': form.get('titulo')?.errors && form.get('titulo')?.touched}">
+                </textarea>
+                <p class="text-danger"
+                    *ngIf="form.get('titulo')?.touched && form.get('titulo')?.errors?.['required']">
+                    Una descripción del trabajo es requerida.
+                </p>
+            </div>
+            <div class="mb-3">
+                <label for="TituloAdquirido" class="form-label">Descripcion de lo aprendido</label>
+                <textarea class="form-control" id="descripcion" placeholder="campo obligatorio" [(ngModel)]="descripcion"
+                    formControlName="descripcion"
+                    [ngClass]="{'is-invalid': form.get('descripcion')?.errors && form.get('descripcion')?.touched, 
+                    'is-valid': form.get('descripcion')?.errors && form.get('descripcion')?.touched}">
+                </textarea>
+                <p class="text-danger"
+                    *ngIf="form.get('descripcion')?.touched && form.get('descripcion')?.errors?.['required']">
+                    Una descripción de lo aprendido es requerida.
+                </p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
-            </div>
+                <button class="btn btn-secondary" type="submit" [disabled]="form.invalid">GUARDAR DATOS</button>
+              </div>   
+                  
         </form>
       </div>
     
     </div>
   </div>
+  <!-- Fin Modal -->

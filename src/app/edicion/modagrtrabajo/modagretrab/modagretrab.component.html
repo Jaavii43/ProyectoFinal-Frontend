@@ -17,7 +17,7 @@
 
             <div class="mb-3">
             <label for="empresa" class="form-label">Empresa en la que se realizo el trabajo</label>
-            <input type="text" class="form-control" id="empresa" placeholder="campo obligatorio" formControlName="empresa"
+            <input type="text" class="form-control" id="empresa" placeholder="campo obligatorio" formControlName="empresa" [(ngModel)]="empresa"
                 [ngClass]="{'is-invalid': form.get('empresa')?.errors && form.get('empresa')?.touched, 'is-valid': form.get('empresa')?.errors && form.get('empresa')?.touched}">
             <p class="text-danger" *ngIf="form.get('empresa')?.touched && form.get('empresa')?.errors?.['required']">
                 El Nombre dela empresa es requerido.
@@ -25,17 +25,15 @@
         </div>
           <div class="fecha_inicio">
           Fecha de inicio<input type="date" class="form-control" id="fecha_inicio" name="trip-start" formControlName="fecha_inicio"
-              value="2018-07-22"
-              min="2018-01-01" max="2018-12-31">
+              value="2018-07-22" min="2018-01-01" max="2018-12-31" [(ngModel)]="fecha_inicio">
           </div>
           <div class="fecha_fin">
               Fecha de finalizacion<input type="date" class="form-control" id="fecha_fin" name="trip-start" formControlName="fecha_fin"
-                  value="2018-07-22"
-                  min="2018-01-01" max="2018-12-31">
+                  value="2018-07-22" min="2018-01-01" max="2018-12-31" [(ngModel)]="fecha_fin">
               </div>
               <div class="mb-3">
                 <label for="descripcionTrabajo" class="form-label">Descripción del Trabajo realizado</label>
-                <textarea class="form-control" id="trabajos" placeholder="campo obligatorio"
+                <textarea class="form-control" id="trabajos" placeholder="campo obligatorio" [(ngModel)]="trabajos"
                     formControlName="trabajos"
                     [ngClass]="{'is-invalid': form.get('trabajos')?.errors && form.get('trabajos')?.touched, 
                     'is-valid': form.get('trabajos')?.errors && form.get('trabajos')?.touched}">

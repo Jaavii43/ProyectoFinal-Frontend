@@ -14,6 +14,7 @@ export class EstudiosComponent implements OnInit {
   constructor(public educacionservice:EducacionService) { }
 
   ngOnInit(): void {
+    this.cargarEducacion();
   }
 
   cargarEducacion():void{

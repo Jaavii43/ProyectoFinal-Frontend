@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TrabajosService } from 'src/app/services/trabajos.service';
 import { Trabajos } from 'src/app/model/trabajos';
+import { TrabajosService } from 'src/app/services/trabajos.service';
 
 @Component({
-  selector: 'app-agregar-trabajo',
-  templateUrl: './agregar-trabajo.component.html',
-  styleUrls: ['./agregar-trabajo.component.css']
+  selector: 'app-modagretrab',
+  templateUrl: './modagretrab.component.html',
+  styleUrls: ['./modagretrab.component.css']
 })
-export class AgregarTrabajoComponent implements OnInit {
+export class ModagretrabComponent {
+
 
   form:FormGroup;
   empresa:''="";
@@ -35,7 +36,7 @@ export class AgregarTrabajoComponent implements OnInit {
   }
 
   get Fecha_inicio(){
-    return this.form.get("fecha_fin");
+    return this.form.get("fecha_inicio");
   }
 
   get Trabajos(){
@@ -47,7 +48,7 @@ export class AgregarTrabajoComponent implements OnInit {
   }
 
   onCreate():void{
-    const trab =new Trabajos(this.empresa, this.trabajos, this.fecha_fin, this.fecha_inicio);
+    const trab =new Trabajos(this.empresa, this.fecha_fin, this.fecha_inicio,  this.trabajos);
     this.trabajosservice.save(trab).subscribe(
       bd=>{
         
@@ -61,5 +62,4 @@ export class AgregarTrabajoComponent implements OnInit {
   limpiar():void{
     this.form.reset();
   }
-
 }

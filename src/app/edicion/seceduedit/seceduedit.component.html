@@ -1,17 +1,18 @@
 <!-- Seccion educacion -->
 <section id="editeducacion" class="educacion">
-    <div class="container pt-3  pb-2">
-        <div class="tituloSeccion">
-            <div class="row">
-            <div class="col-10 mt-3 text-left">
+    <div class="container pb-2">
+        <div class="row">
+            <div class="col-10 mt-3 text-left mb-1 tituloseccionedit">
                 <h2>Estudios Cursados</h2>
             </div>
-            <div class="col-2 mt-3">
-              <app-botonagregar></app-botonagregar>
+            <div class="col-2 mt-3 mb-1 tituloseccionedit">
+                <li class="list-group-item mt-2">
+                    <i class="fa-solid fa-file-circle-plus" type="button" data-bs-toggle="modal" data-bs-target="#ModalAgregarEstudio" ></i>
+                </li>
+                <app-modeagrest></app-modeagrest>
             </div>
-        </div>
-        </div>
-        <div class="cursado" *ngFor="let educacion of educa">
+        </div>       
+        <div class="cursado" *ngFor="let educacion of educar">
             <div class="row">
                 <div class="col-9">      
                     <h3><b style="letter-spacing: 0px;"><span style="font-size: 25px;">{{educacion.escuela}}</span></b></h3>
@@ -27,9 +28,8 @@
               <h3><b style="color: inherit; letter-spacing: 0px;"><span style="font-size: 18px;">{{educacion.titulo}}</span></b></h3>
               <h3><b style="color: inherit; letter-spacing: 0px;"><span style="font-size: 18px;">{{educacion.fecha_inicio}} - {{educacion.fecha_fin}}</span></b></h3>                
             </div>
-                <hr>
-            </div>   
-
+            <hr>
+        </div>
     </div>
 </section>
   <!-- Fin Seccion Educacion -->

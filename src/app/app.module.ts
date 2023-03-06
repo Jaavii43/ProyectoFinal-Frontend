@@ -26,7 +26,6 @@ import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { TrabajosComponent } from './trabajos/trabajos.component';
 import { EstudiosComponent } from './estudios/estudios.component';
 import { BotonagregarComponent } from './edicion/botonagregar/botonagregar.component';
-import { AgregarTrabajoComponent } from './edicion/modeditra/agregar-trabajo.component';
 import { BotagrtrabajoComponent } from './edicion/botonagregartrabajo/botagrtrabajo/botagrtrabajo.component';
 import { ModagrhabComponent } from './edicion/modagrhab/modagrhab.component';
 import { ModagrproyComponent } from './edicion/modagrproy/modagrproy.component';
@@ -37,6 +36,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SobremiService } from './services/sobremi.service';
 import { InterceptorService } from './services/interceptor.service';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ModagretrabComponent } from './edicion/modagrtrabajo/modagretrab/modagretrab.component';
+import { BotonagrestuComponent } from './edicion/botonagrestu/botonagrestu.component';
  
 
 @NgModule({
@@ -65,13 +66,14 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     TrabajosComponent,
     EstudiosComponent,
     BotonagregarComponent,
-    AgregarTrabajoComponent,
     BotagrtrabajoComponent,
     ModagrhabComponent,
     ModagrproyComponent,
     ModeagrestComponent,
     BotonagregarproyComponent,
-    BotonagrhabComponent    
+    BotonagrhabComponent,
+    ModagretrabComponent,
+    BotonagrestuComponent    
   ],
   imports: [
     BrowserModule,
