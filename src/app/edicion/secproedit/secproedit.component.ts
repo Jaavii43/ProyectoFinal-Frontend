@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Proyectos } from 'src/app/model/proyectos';
+import { ProyectosService } from 'src/app/services/proyectos.service';
 
 @Component({
   selector: 'app-secproedit',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecproeditComponent implements OnInit {
 
-  constructor() { }
+  proy: Proyectos[]=[];
+  
+  constructor(public proyectosservice: ProyectosService) { }
 
   ngOnInit(): void {
+    this.cargarEducacion();
   }
+
+  cargarEducacion():void{
+    this.proyectosservice.list().subscribe(data =>(this.proy=data))
+  }
+
+  delete(id:number){    
+    this.proyectosservice.delete(id).subscribe(
+      bd => {          
+      },
+      () => {
+        alert("Se elimino la educacion")
+        this.cargarEducacion()
+      })
+      }
+
 
 }

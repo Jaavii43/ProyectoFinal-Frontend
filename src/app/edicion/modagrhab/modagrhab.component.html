@@ -1,7 +1,6 @@
 <div class="modal fade" id="ModalAgregarhabilidad" tabindex="-1" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog">
-  <div class="modal-content">
-    
+  <div class="modal-content">    
     <div class="modal-header">
       <h1 class="modal-title fs-5" id="exampleModalLabel">HABILIDADES</h1>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
@@ -14,8 +13,7 @@
                   <span class="input-group-text border-0" id="basic-addon1">ID:</span>
                 </div>
                 <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
-              </div>
-  
+              </div>  
              <div class="mb-3">
               <label for="area" class="form-label">Nombre de la Habilidad</label>
               <input type="text" class="form-control" id="area" placeholder="campo obligatorio" formControlName="area" [(ngModel)]="area" 

@@ -1,34 +1,30 @@
-      <!-- Section Edicion Experiencias laborales -->
+<!-- Section Edicion proyectos -->
 <section id="editproyectos" class="proyectos">
-    <div class="container pt-3">
-        <div class="tituloSeccion">
-          <div class="row">
+  <div class="container ">
+       <div class="row">
           <div class="col-10 mt-3 text-left">
             <h2>Proyectos Realizados</h2>
+          </div>
+          <div class="col-2 mt-3">
+            <app-botonagregarproy></app-botonagregarproy>
+          </div>
+        </div>  
+        <div class="proyecto" *ngFor="let proyectos of proy">
+          <div class="row">
+            <div class="col-9">
+              <h3><b style="letter-spacing: 0px;"><span style="font-size: 25px;">{{proyectos.sector}}</span></b></h3>
+              <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{proyectos.tipo}}</span></b></h3>
             </div>
-            <div class="col-2 mt-3">
-              <app-botonagregarproy></app-botonagregarproy>
+            <div class="col-3">
+            <button type="button" class="btn btn-close-black">
+               <i class="fa-solid fa-eraser" (click)="delete(proyectos.id)"></i>
+            </button>
             </div>
-          </div>  
-        </div>
-        <div class="proyecto1">
-                <div class="row">
-                  <h3><b style="letter-spacing: 0px;"><span style="font-size: 25px;">Creacion de aplicacion para control de stock y ventas</span></b></h3>
-                  <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">Realizado para Adriana educa</span></b></h3>
-                </div>
-                <div class="row" >  
-                        <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">El tiempo estimado fue de 2 meses</span></b></h3>                             
-                </div>
-        </div>
-        <hr>    
-        <div class="proyecto2">
-            <div class="row cursado2">
-              <h3><b style="letter-spacing: 0px;"><span style="font-size: 25px;">Instalacion de swtich y router</span></b><br></h3>
-              <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">Se cableo red interna, instalo router y switch para consultorios</span></b></h3>
-            </div>
-            <div class="row">
-                    <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">Tiempo de relizacion 2 semanas</span></b></h3>                
-            </div>
-        </div>
-    </div>
+          </div> 
+          <div class="row" >  
+                  <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{proyectos.tiempo_ejecucion}}</span></b></h3>                             
+          </div>
+          <hr> 
+        </div>         
+  </div>
 </section>

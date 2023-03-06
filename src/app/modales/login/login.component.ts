@@ -60,7 +60,7 @@ export class LoginComponent implements OnInit{
         console.log("DATA:" + JSON.stringify(bd.id));
         
         if (bd.id) {
-          alert("podes EDITAR TU PORTFOLIO");
+          alert("Ya podes editar el Portfolio");
           //window.location.reload();
           this.ruta.navigate(['/dashboard']);
         } else {
