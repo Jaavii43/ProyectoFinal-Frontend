@@ -1,47 +1,40 @@
-<section class="login">
+<div class="modal fade" id="ModalLogin" tabindex="-1" aria-labelledby="ModalLogin"></div>
     <div class="container text-center mt-1">
-        <div class="row">
-            <div class="col-2">
-            </div>
-            <div class="col-8 formulario-login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5" >Inicie Seccion para poder editar</h1>
+                    <!--  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()">Limpiar</button>-->
+                </div>          
                 <form [formGroup]="form"   name="loginform" (ngSubmit)="onEnviar($event)">
                     <div class="modal-body">
                         <div class="row">
                             <label for="email" class="col-sm-10 col-form-label">Email</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-12">
                                 <input type="email" pattern="[^ @]*@[^ @]*" formControlName="email" class="form-control"
                                     [(ngModel)]="sobremi.email"
                                     [ngClass]="{'is-invalid': Email.errors && Email.touched, 'is-valid': !Email.errors && Email.touched}"
                                     id="email" value="">
                                 <div *ngIf="Email.errors && Email.touched">
-                                    <p *ngIf="Email.hasError('required')" class="text-white">
-                                        Ingrese su email!!!!!
-                                    </p>
-                                    <p *ngIf="Email.hasError('email')" class="text-white">
-                                        Ingrese un email valido!!!
-                                    </p>
+                                    <p *ngIf="Email.hasError('required')" class="text-white">Ingrese su email</p>
+                                    <p *ngIf="Email.hasError('email')" class="text-white">Ingrese un email valido</p>
                                 </div>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="clave" class="col-sm-10 col-form-label">Contraseña</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-12">
                                 <!--input type="password" class="form-control" id="inputPassword"-->
-                                <input type="password" formControlName="clave" class="form-control"
-                                    [(ngModel)]="sobremi.clave"
+                                <input type="password" formControlName="clave" class="form-control" [(ngModel)]="sobremi.clave"
                                     [ngClass]="{'is-invalid': Clave.errors && Clave.touched, 'is-valid': !Clave.errors && Clave.touched}"
-                                    id="clave">
-                                <div *ngIf="Clave.errors && Clave.touched">
-                                    <p *ngIf="Clave.hasError('required')" class="text-white">
-                                        La contraseña es requerida!!!
-                                    </p>
-                                    <p *ngIf="Clave.hasError('minLength(8)')" class="text-white">
-                                        La contraseña debe tener al menos 8 caracteres!!!
+                                    id="inputPassword">
+                            <div *ngIf="Clave.errors && Clave.touched">
+                                    <p *ngIf="Clave.hasError('required')" class="text-white">La contraseña es requerida</p>
+                                    <p *ngIf="Clave.hasError('minLength(8)')" class="text-white">La contraseña debe tener al menos 8 caracteres!!!
                                     </p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary mb-2">
                                 <a>iniciar sesión</a>
@@ -50,8 +43,5 @@
                     </div>
                 </form>
             </div>
-            <div class="col-2">
-            </div>
         </div>
-    </div>
-</section>
+</div>
