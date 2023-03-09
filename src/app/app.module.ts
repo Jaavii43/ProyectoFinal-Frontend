@@ -38,6 +38,7 @@ import { InterceptorService } from './services/interceptor.service';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ModagretrabComponent } from './edicion/modagrtrabajo/modagretrab/modagretrab.component';
 import { BotonagrestuComponent } from './edicion/botonagrestu/botonagrestu.component';
+import { ModalEducacionComponent } from './edicion/modalPruebaEdicion/modal-educacion/modal-educacion.component';
  
 
 @NgModule({
@@ -73,7 +74,8 @@ import { BotonagrestuComponent } from './edicion/botonagrestu/botonagrestu.compo
     BotonagregarproyComponent,
     BotonagrhabComponent,
     ModagretrabComponent,
-    BotonagrestuComponent    
+    BotonagrestuComponent,
+    ModalEducacionComponent    
   ],
   imports: [
     BrowserModule,

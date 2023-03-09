@@ -22,6 +22,10 @@
                     <button type="button" class="btn btn-close-black">
                        <i class="fa-solid fa-eraser" (click)="delete(educacion.id)"></i>
                     </button>
+                    <li class="list-group-item mt-2">
+                        <i class="fa-solid fa-file-circle-plus" type="button" data-bs-toggle="modal" data-bs-target="#educacionModalpen" ></i>
+                    </li>
+                    <app-modal-educacion></app-modal-educacion>
                 </div>                    
             </div>
             <div class="row" >  
