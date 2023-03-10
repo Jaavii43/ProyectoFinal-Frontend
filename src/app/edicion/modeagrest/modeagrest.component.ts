@@ -59,7 +59,7 @@ export class ModeagrestComponent implements OnInit {
       bd=>{
         
       }, 
-        ()=>{alert("Nueva experiencia creada"); 
+        ()=>{alert("Nueva educacion creada"); 
           this.form.reset()
           location.reload()}
         );

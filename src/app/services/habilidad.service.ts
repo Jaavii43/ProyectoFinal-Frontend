@@ -29,5 +29,9 @@ export class HabilidadService {
 
   public update(id:number, Habilidad: Habilidade) : Observable<any>{
     return this.httpClient.put<any>(this.URL + `editar/${id}`, Habilidad);
-  } 
+  }
+  
+  public editarHabilidad(Habilidad: Habilidade): Observable<any> {
+    return this.httpClient.put<Habilidade>(this.URL + `editar/$`, Habilidad);
+  }
 }

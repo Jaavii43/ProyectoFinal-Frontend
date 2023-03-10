@@ -4,13 +4,23 @@ section.educacion{
 h3{
     text-align: left;
 }
-div.tituloseccionedit{
+div.seccionedit{
     background-color: rgb(133, 138, 134);
 }
 div.col-2{
     text-align: center;
     font-weight: bold;
+    
   }
-  .row{
+
+.row{
     --bs-gutter-x:0rem;
   }
+li.list-group-item{
+    background-color: rgb(133, 138, 134);
+    --bs-list-group-border-width: 0px;
+}
+list-group-item{
+    border: 0 rem
+}
+

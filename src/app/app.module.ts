@@ -39,6 +39,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ModagretrabComponent } from './edicion/modagrtrabajo/modagretrab/modagretrab.component';
 import { BotonagrestuComponent } from './edicion/botonagrestu/botonagrestu.component';
 import { ModalEducacionComponent } from './edicion/modalPruebaEdicion/modal-educacion/modal-educacion.component';
+import { ModalEdicionHabiComponent } from './edicion/modal-edicion-habi/modal-edicion-habi.component';
  
 
 @NgModule({
@@ -75,7 +76,8 @@ import { ModalEducacionComponent } from './edicion/modalPruebaEdicion/modal-educ
     BotonagrhabComponent,
     ModagretrabComponent,
     BotonagrestuComponent,
-    ModalEducacionComponent    
+    ModalEducacionComponent,
+    ModalEdicionHabiComponent    
   ],
   imports: [
     BrowserModule,
