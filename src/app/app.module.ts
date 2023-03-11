@@ -40,6 +40,7 @@ import { ModagretrabComponent } from './edicion/modagrtrabajo/modagretrab/modagr
 import { BotonagrestuComponent } from './edicion/botonagrestu/botonagrestu.component';
 import { ModalEducacionComponent } from './edicion/modalPruebaEdicion/modal-educacion/modal-educacion.component';
 import { ModalEdicionHabiComponent } from './edicion/modal-edicion-habi/modal-edicion-habi.component';
+import { ModalEdicionTrabajoComponent } from './edicion/modal-edicion-trabajo/modal-edicion-trabajo.component';
  
 
 @NgModule({
@@ -77,7 +78,8 @@ import { ModalEdicionHabiComponent } from './edicion/modal-edicion-habi/modal-ed
     ModagretrabComponent,
     BotonagrestuComponent,
     ModalEducacionComponent,
-    ModalEdicionHabiComponent    
+    ModalEdicionHabiComponent,
+    ModalEdicionTrabajoComponent    
   ],
   imports: [
     BrowserModule,

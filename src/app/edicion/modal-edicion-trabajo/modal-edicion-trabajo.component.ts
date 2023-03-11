@@ -1,62 +1,61 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Educacion } from 'src/app/model/educacion';
-import { EducacionService } from 'src/app/services/educacion.service';
+import { Trabajos } from 'src/app/model/trabajos';
+import { TrabajosService } from 'src/app/services/trabajos.service';
 
 @Component({
-  selector: 'app-modal-educacion',
-  templateUrl: './modal-educacion.component.html',
-  styleUrls: ['./modal-educacion.component.css']
+  selector: 'app-modal-edicion-trabajo',
+  templateUrl: './modal-edicion-trabajo.component.html',
+  styleUrls: ['./modal-edicion-trabajo.component.css']
 })
-export class ModalEducacionComponent implements OnInit {
+export class ModalEdicionTrabajoComponent {
 
   form: FormGroup;
-  educaciones: Educacion[] = [];
-  edu:any;
+  trabajos: Trabajos [] = [];
+  tra:any;
   
-  constructor(private formBuilder: FormBuilder, private educacionservice: EducacionService){
+  constructor(private formBuilder: FormBuilder, private trabajosservice: TrabajosService){
     
     this.form = this.formBuilder.group({
       id:[''],
-      escuela: ['', [Validators.required]],
+      empresa: ['', [Validators.required]],
       fecha_fin: [''],
       fecha_inicio: [''],
-      titulo: ['', [Validators.required]],
-      descripcion: ['', [Validators.required]],
-      })
-
+      trabajo: ['', [Validators.required]],
+    })
   }
+
   ngOnInit(): void {
-    this.cargarEducacion();
+    this.cargarTrabajo();
   }
-
-  cargarEducacion(): void {
-    this.educacionservice.list().subscribe(
+  
+  cargarTrabajo(): void {
+    this.trabajosservice.list().subscribe(
       data => {
-        this.educaciones = data;
+        this.trabajos = data;
       })
   }
 
   cargarDetalle(id: number) {
-    this.educacionservice.detail(id).subscribe(
+    this.trabajosservice.detail(id).subscribe(
       {
         next: (info) => {
           this.form.setValue(info);
         },
         error: (e) => {
           console.error(e)
-          alert("error al cargar educacion")
+          alert("error al cargar trabajo")
         },
         complete: () => console.info('complete aqui')
       }
     )
   }
 
-  guardar() {
+    guardar() {
     console.log("FUNCIONA!!!")
-    let edu = this.form.value;
+    let tra = this.form.value;
     console.log()    
-    this.educacionservice.editarEducacion(edu).subscribe({
+    this.trabajosservice.editarTrabajo(tra).subscribe({
         next: (data) => {
         this.limpiar();
         },
@@ -69,10 +68,10 @@ export class ModalEducacionComponent implements OnInit {
   }
 
   borrar(id: number) {
-    this.educacionservice.delete(id).subscribe(
+    this.trabajosservice.delete(id).subscribe(
       db => {
           alert("se pudo eliminar satisfactoriamente")
-          this.cargarEducacion()
+          this.cargarTrabajo()
         },
         error => {
         alert("No se pudo eliminar")

@@ -2,11 +2,20 @@
   <section id="editexplab" class="practicas">
     <div class="container  pb-2">
          <div class="row">
-                <div class="col-10 mt-3 text-left">
+                <div class="col-10 mt-3 text-left mb-1 seccionedit">
                     <h2>Experiencias Laborales</h2>
                 </div>
-                <div class="col-2 mt-3">
-                  <app-botagrtrabajo></app-botagrtrabajo>
+                <div class="col-2 mt-3 mb-1 seccionedit ml-5">
+                    <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item">
+                        <i class="fa-solid fa-file-circle-plus" type="button" data-bs-toggle="modal" data-bs-target="#ModalAgregarTrabajo" ></i>
+                    </li>
+                    <app-modagretrab></app-modagretrab>
+                    <li class="list-group-item ">
+                        <i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#ModalEdicionTrabajo" ></i>
+                    </li>
+                    <app-modal-edicion-trabajo></app-modal-edicion-trabajo>
+                    </ul>
                 </div>
         </div>
         <div class="experiencia1" *ngFor="let trabajos of trabajo">
@@ -20,8 +29,9 @@
                             </button>
                     </div>                
                     <div class="row">
-                        <div class="col-3">
-                            <h3><b style="letter-spacing: 0px;"><span style="font-size: 15px;">{{trabajos.fecha_inicio}} - {{trabajos.fecha_fin}}</span></b></h3>
+                        <div class="col-5">
+                            <h4><b style="letter-spacing: 0px;">Fechas en que se realizo estos trabajos:</b></h4>
+                            <h3><b style="letter-spacing: 0px;"><span style="font-size: 15px;">Desde el {{trabajos.fecha_inicio}} - Hasta el{{trabajos.fecha_fin}}</span></b></h3>
                         </div>
                     </div>
                     <div class="row" >

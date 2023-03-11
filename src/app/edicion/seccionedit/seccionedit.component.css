@@ -4,14 +4,26 @@ section.practicas{
 h3{
     text-align: left;
 }
-h2{
+div.seccionedit{
     background-color: rgb(133, 138, 134);
 }
 div.col-2{
     text-align: center;
     font-weight: bold;
+    
+  }
+div.col-2{
+    text-align: center;
+    font-weight: bold;
   }
   
-  .row{
+.row{
     --bs-gutter-x:0rem;
   }
+li.list-group-item{
+    background-color: rgb(133, 138, 134);
+    --bs-list-group-border-width: 0px;
+}
+list-group-item{
+    border: 0 rem
+}

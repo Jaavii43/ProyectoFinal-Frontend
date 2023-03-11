@@ -17,7 +17,7 @@ export class TrabajosService {
     }
   
     public detail(id:number) : Observable <Trabajos> {
-      return this.httpClient.get<Trabajos>(this.URL + `traer/${id}`);
+      return this.httpClient.get<Trabajos>(this.URL + `ver/` + id);
     }
   
     public delete(id:number) : Observable<any>{
@@ -28,8 +28,8 @@ export class TrabajosService {
       return this.httpClient.post<any>(this.URL + `new`, trabajo);
     }
   
-    public update(id:number, trabajo: Trabajos) : Observable<any>{
-      return this.httpClient.put<any>(this.URL + `editar/${id}`, trabajo);
+    public editarTrabajo(trabajo: Trabajos) : Observable<any>{
+      return this.httpClient.put<any>(this.URL + `editar/`, trabajo);
     }
   
 }
