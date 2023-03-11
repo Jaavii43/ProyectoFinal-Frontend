@@ -16,10 +16,6 @@
                         <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(habilidad.id)">
                           <i class="fa-solid fa-pen"></i>
                         </button>
-                        <!--Tachico de Basura que se hace fondo rojo al tocarlo-->
-                        <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" (click)="borrar(habilidad.id)">
-                          <i class="fa-solid fa-trash"></i>
-                        </button>
                       </span>
                     </li>
                   </ul>
@@ -56,7 +52,7 @@
                   </p>
                 </div>
               <div class="modal-footer">
-                <button class="btn btn-secondary" type="submit" [disabled]="form.invalid">GUARDAR DATOS</button>
+                <button class="btn btn-secondary" type="submit" (click)="guardar()" [disabled]="form.invalid">GUARDAR DATOS</button>
               </div>         
             </div>
           </form>

@@ -18,10 +18,6 @@
                   <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(educacion.id)">
                     <i class="fa-solid fa-pen"></i>
                   </button>
-                  <!--Tachico de Basura que se hace fondo rojo al tocarlo-->
-                  <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" (click)="borrar(educacion.id)">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
                 </span>
               </li>
             </ul>
@@ -36,7 +32,8 @@
   
             <div class="mb-3">
               <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="escuela" placeholder="campo obligatorio" formControlName="escuela" [ngClass]="{'is-invalid': form.get('escuela')?.errors && form.get('escuela')?.touched, 'is-valid': form.get('escuela')?.errors && form.get('escuela')?.touched}">
+              <input type="text" class="form-control" id="escuela" placeholder="campo obligatorio" formControlName="escuela" 
+              [ngClass]="{'is-invalid': form.get('escuela')?.errors && form.get('escuela')?.touched, 'is-valid': form.get('escuela')?.errors && form.get('escuela')?.touched}">
               <p class="text-danger"
                 *ngIf="form.get('escuela')?.touched && form.get('escuela')?.errors?.['required']">
                 El Nombre de la Educacion es requerido.
@@ -70,7 +67,7 @@
                 
             <div class="modal-footer">
               <button class="btn btn-secondary" (click)="form.reset()">RESET</button>
-              <button class="btn btn-secondary" (click)="guardar()"[disabled]="form.invalid">GUARDAR DATOS</button>
+              <button class="btn btn-secondary" (click)="guardar()" [disabled]="form.invalid">GUARDAR DATOS</button>
             </div>
           </div>
         </form>

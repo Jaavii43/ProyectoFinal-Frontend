@@ -56,7 +56,7 @@ export class ModeagrestComponent implements OnInit {
   onCreate():void{
     const educ =new Educacion(this.escuela, this.fecha_fin, this.fecha_inicio,  this.titulo, this.descripcion);
     this.educacionservice.save(educ).subscribe(
-      bd=>{
+      data =>{
         
       }, 
         ()=>{alert("Nueva educacion creada"); 

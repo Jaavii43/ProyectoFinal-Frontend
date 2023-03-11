@@ -16,7 +16,7 @@ export class HabilidadService {
   }
 
   public detail(id:number) : Observable <Habilidade> {
-    return this.httpClient.get<Habilidade>(this.URL + `traer/${id}`);
+    return this.httpClient.get<Habilidade>(this.URL + `ver/` + id);
   }
 
   public delete(id:number) : Observable<any>{
@@ -26,12 +26,8 @@ export class HabilidadService {
  public save(Habilidad: Habilidade) : Observable<any>{
     return this.httpClient.post<any>(this.URL + `new`, Habilidad);
   }
-
-  public update(id:number, Habilidad: Habilidade) : Observable<any>{
-    return this.httpClient.put<any>(this.URL + `editar/${id}`, Habilidad);
-  }
   
   public editarHabilidad(Habilidad: Habilidade): Observable<any> {
-    return this.httpClient.put<Habilidade>(this.URL + `editar/$`, Habilidad);
+    return this.httpClient.put<Habilidade>(this.URL + `editar/`, Habilidad);
   }
 }

@@ -12,6 +12,7 @@ export class ModalEducacionComponent implements OnInit {
 
   form: FormGroup;
   educaciones: Educacion[] = [];
+  edu:any;
   
   constructor(private formBuilder: FormBuilder, private educacionservice: EducacionService){
     
@@ -45,7 +46,7 @@ export class ModalEducacionComponent implements OnInit {
         },
         error: (e) => {
           console.error(e)
-          alert("error al modificar")
+          alert("error al cargar educacion")
         },
         complete: () => console.info('complete aqui')
       }
@@ -55,25 +56,17 @@ export class ModalEducacionComponent implements OnInit {
   guardar() {
     console.log("FUNCIONA!!!")
     let edu = this.form.value;
-    console.log()
-
-    if (edu.id == '') {
-      this.educacionservice.save(edu).subscribe(
-        data => {
-          alert("Su nueva Educación fue añadida correctamente");
-          this.cargarEducacion();
-          this.form.reset();
-        }
-      )
-    } else {
-      this.educacionservice.editarEducacion(edu).subscribe(
-        data => {
-          alert("Educación editada!!! UIHUUU!!!!");
-          this.cargarEducacion();
-          this.form.reset();
-        }
-      )
-    }
+    console.log()    
+    this.educacionservice.editarEducacion(edu).subscribe({
+        next: (data) => {
+        this.limpiar();
+        },
+          error: (e) => console.error(e),
+          complete: () => console.info('complete')
+        });
+      window.location.reload();
+      console.log("Se modificó correctamente el item");
+ 
   }
 
   borrar(id: number) {
@@ -86,4 +79,10 @@ export class ModalEducacionComponent implements OnInit {
         alert("No se pudo eliminar")
         })
       }
+
+  limpiar() {
+    console.log("Se limpió el formulario");
+    this.form.reset();
+    
+    }
 }

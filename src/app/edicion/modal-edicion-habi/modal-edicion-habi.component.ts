@@ -16,6 +16,7 @@ export class ModalEdicionHabiComponent {
   constructor(private formBuilder: FormBuilder, public habilidadservice:HabilidadService) {
     
     this.form = this.formBuilder.group({
+      id:[''],
       area: ['', [Validators.required]],
       porcentaje: ['', [Validators.required, Validators.min(0), Validators.max(100)]],
       })
@@ -41,7 +42,7 @@ export class ModalEdicionHabiComponent {
         },
         error: (e) => {
           console.error(e)
-          alert("error al modificar")
+          alert("error al cargar Habilidad")
         },
         complete: () => console.info('complete aqui')
       }
@@ -53,24 +54,17 @@ export class ModalEdicionHabiComponent {
     let hab = this.form.value;
     console.log()
 
-    if (hab.id == '') {
-      this.habilidadservice.save(hab).subscribe(
-        data => {
-          alert("Su nueva Educación fue añadida correctamente");
-          this.cargarHabilidad();
-          this.form.reset();
-        }
-      )
-    } else {
-      this.habilidadservice.editarHabilidad(hab).subscribe(
-        data => {
-          alert("Educación editada!!! UIHUUU!!!!");
-          this.cargarHabilidad();
-          this.form.reset();
-        }
-      )
+      this.habilidadservice.editarHabilidad(hab).subscribe({
+        next: (data) => {
+       this.limpiar();
+        },
+          error: (e) => console.error(e),
+          complete: () => console.info('complete')
+        });
+      window.location.reload();
+      console.log("Se modificó correctamente el item");
     }
-  }
+  
 
   borrar(id: number) {
     this.habilidadservice.delete(id).subscribe(
@@ -82,5 +76,10 @@ export class ModalEdicionHabiComponent {
         alert("No se pudo eliminar")
         })
       }
+        limpiar() {
+    console.log("Se limpió el formulario");
+    this.form.reset();
+    
+    }
 
 }
