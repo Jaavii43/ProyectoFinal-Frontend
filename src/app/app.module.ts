@@ -42,6 +42,7 @@ import { ModalEducacionComponent } from './edicion/modalPruebaEdicion/modal-educ
 import { ModalEdicionHabiComponent } from './edicion/modal-edicion-habi/modal-edicion-habi.component';
 import { ModalEdicionTrabajoComponent } from './edicion/modal-edicion-trabajo/modal-edicion-trabajo.component';
 import { ModaledicionproyectosComponent } from './edicion/modaledicionproyectos/modaledicionproyectos.component';
+import { ModaledicionsobremiComponent } from './edicion/modaledicionsobremi/modaledicionsobremi.component';
  
 
 @NgModule({
@@ -81,7 +82,8 @@ import { ModaledicionproyectosComponent } from './edicion/modaledicionproyectos/
     ModalEducacionComponent,
     ModalEdicionHabiComponent,
     ModalEdicionTrabajoComponent,
-    ModaledicionproyectosComponent    
+    ModaledicionproyectosComponent,
+    ModaledicionsobremiComponent    
   ],
   imports: [
     BrowserModule,

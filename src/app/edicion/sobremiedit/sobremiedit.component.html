@@ -1,13 +1,11 @@
 <!-- Section 1 -->
 <section id="section1" class="sobre-mi">
   <div class="container-fluid text-center">
-    <div class="row mt-xl-5">
+    <div class="row mt-5">
       <div class="col-3">
       </div>
-      <div class="col-6 mt-3">
-        <div class="area container-fluid">
-          ⚠ PortFolio ⚠
-         </div> 
+      <div class="col-6 mt-3 area">
+        ⚠ PORTFOLIO ⚠        
       </div>
       <div class="col-3">
       </div>
@@ -26,8 +24,14 @@
       </div>
         <div class="col-6 mt-4">
           <h5>{{sobremi.descripcion}}</h5>
-              <li class="list-group-item"><i class="fa-regular fa-pen-to-square" type="button" data-bs-toggle="modal" data-bs-target="#ModalEditSobremi"></i></li>
+             <ul class="list-group-horizontal list-group">
+            <li class="list-group-item"><i class="fa-regular fa-pen-to-square" type="button" data-bs-toggle="modal" data-bs-target="#ModalEditSobremi"></i></li>
               <app-modeditsobremi></app-modeditsobremi>
+            <li class="list-group-item ">
+              <i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#ModalEditarProyecto" ></i>
+            </li>
+              <app-modaledicionsobremi></app-modaledicionsobremi>
+            </ul>
         </div>
         <div class="col-3">
         </div>
