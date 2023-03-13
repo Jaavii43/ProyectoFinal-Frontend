@@ -1,10 +1,16 @@
 i.fa-brands.fa-user-lock:hover{
     color: #C13584;
+    
 }
 li.list-group-item{
     background-color: rgb(35, 190, 118);
-    height: 2.5rem ; 
+    height: 2.5rem ;
+    
 }
 li.login{
-    border-bottom-left-radius: 10;
+    border-bottom-right-radius: 18%;
+    border-top-right-radius: 18%;
+}
+.fa-brands.fa-user{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

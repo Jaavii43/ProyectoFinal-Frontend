@@ -14,7 +14,7 @@ import { IntroComponent } from './intro/intro.component';
 import { BottonloginComponent } from './bottonlogin/bottonlogin.component';
 import { BottonlogoutComponent } from './bottonlogout/bottonlogout.component';
 import { NavbardashboardComponent } from './navbardashboard/navbardashboard.component';
-import { SobremieditComponent } from './edicion/sobremiedit/sobremiedit/sobremiedit.component';
+import { SobremieditComponent } from './edicion/sobremiedit/sobremiedit.component';
 import { SeccioneditComponent } from './edicion/seccionedit/seccionedit.component';
 import { ModeditsobremiComponent } from './edicion/modeditsobremi/modeditsobremi.component';
 import { BotonesedicionComponent } from './edicion/botonesedicion/botonesedicion.component';
@@ -41,6 +41,7 @@ import { BotonagrestuComponent } from './edicion/botonagrestu/botonagrestu.compo
 import { ModalEducacionComponent } from './edicion/modalPruebaEdicion/modal-educacion/modal-educacion.component';
 import { ModalEdicionHabiComponent } from './edicion/modal-edicion-habi/modal-edicion-habi.component';
 import { ModalEdicionTrabajoComponent } from './edicion/modal-edicion-trabajo/modal-edicion-trabajo.component';
+import { ModaledicionproyectosComponent } from './edicion/modaledicionproyectos/modaledicionproyectos.component';
  
 
 @NgModule({
@@ -79,7 +80,8 @@ import { ModalEdicionTrabajoComponent } from './edicion/modal-edicion-trabajo/mo
     BotonagrestuComponent,
     ModalEducacionComponent,
     ModalEdicionHabiComponent,
-    ModalEdicionTrabajoComponent    
+    ModalEdicionTrabajoComponent,
+    ModaledicionproyectosComponent    
   ],
   imports: [
     BrowserModule,

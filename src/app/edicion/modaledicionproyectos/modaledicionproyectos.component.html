@@ -1,0 +1,68 @@
+<!-- Modal de EDUCACION-->
+<div class="modal fade" id="ModalEditarProyecto" tabindex="-1" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog">
+    <div class="modal-content">    
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Proyectos</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+      </div>
+    <form [formGroup]="form" name="proyectosform">
+        <div class="modal-body">            
+            <ul class="p-0">
+                <li *ngFor="let proyecto of proyectos" class="d-flex justify-content-between align-items-center m-1 ">
+                    <span>{{proyecto.id}} {{proyecto.sector}}</span>
+                    <span class="d-flex justify-content-between gap-2">
+                    <!--lapicito rojo que se cambia al tocarlo-->
+                      <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(proyecto.id)">
+                        <i class="fa-solid fa-pen"></i>
+                      </button>
+                    </span>
+                  </li>    
+            </ul>    
+      
+                <!--esto es la validacion  renderizado condicional-->
+                <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
+                  <div class="input-group-prepend border-0">
+                    <span class="input-group-text border-0" id="basic-addon1">ID:</span>
+                  </div>
+                  <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
+                </div>
+    
+               <div class="mb-3">
+                <label for="sector" class="form-label">Titulo del proyecto</label>
+                <input type="text" class="form-control" id="sector" placeholder="campo obligatorio" formControlName="sector" 
+                [ngClass]="{'is-invalid': form.get('sector').errors && form.get('sector').touched, 'is-valid': !form.get('sector').errors && form.get('sector').touched}">
+                <p class="text-danger"
+                  *ngIf="form.get('sector').touched && form.get('sector').errors?.['required']">
+                    El area del sector es requerido.
+                  </p>
+                </div>
+              <div class="mb-3">
+                <label for="tipo" class="form-label">Una pequeña descripcion de lo realizado:  </label>
+                <input type="text" class="form-control" placeholder="campo obligatorio" id="tipo" formControlName="tipo" 
+                [ngClass]="{'is-invalid': form.get('tipo').errors && form.get('tipo').touched, 'is-valid': !form.get('tipo').errors && form.get('tipo').touched}">
+                <p class="text-danger"
+                  *ngIf="form.get('tipo').touched && form.get('tipo')?.errors?.['required']">
+                    El tipo es requerido!
+                  </p>
+              </div>
+              <div class="mb-3">
+                <label for="tiempo_ejecucion" class="form-label">Tiempo empleado para la realizacion:  </label>
+                <input type="text" class="form-control" placeholder="campo obligatorio" id="tiempo_ejecucion" formControlName="tiempo_ejecucion" 
+                [ngClass]="{'is-invalid': form.get('tiempo_ejecucion').errors && form.get('tipo').touched, 'is-valid': !form.get('tiempo_ejecucion').errors && form.get('tiempo_ejecucion').touched}">
+                <p class="text-danger"
+                  *ngIf="form.get('tiempo_ejecucion').touched && form.get('tiempo_ejecucion')?.errors?.['required']">
+                    El tiempo de ejecucion es requerido
+                  </p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" (click)="form.reset()">RESET</button>
+                <button class="btn btn-secondary" (click)="guardar()" [disabled]="form.invalid">GUARDAR DATOS</button>
+              </div>         
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+     
+

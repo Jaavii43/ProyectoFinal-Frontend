@@ -24,7 +24,6 @@
                         <div class="mb-3 row">
                             <label for="clave" class="col-sm-10 col-form-label">Contraseña</label>
                             <div class="col-sm-12">
-                                <!--input type="password" class="form-control" id="inputPassword"-->
                                 <input type="password" formControlName="clave" class="form-control" [(ngModel)]="sobremi.clave"
                                     [ngClass]="{'is-invalid': Clave.errors && Clave.touched, 'is-valid': !Clave.errors && Clave.touched}"
                                     id="inputPassword">

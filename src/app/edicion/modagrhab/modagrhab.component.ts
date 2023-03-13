@@ -13,7 +13,7 @@ export class ModagrhabComponent implements OnInit {
 
   form: FormGroup;
   area: '' = "";
-  porcentaje: 0 = 0;
+  porcentaje: any;
   
 
 
@@ -23,7 +23,10 @@ export class ModagrhabComponent implements OnInit {
       area: ['', [Validators.required]],
       porcentaje: ['', [Validators.required, Validators.min(0), Validators.max(100)]],
       })
-   }
+      
+    
+   
+    }
 
   ngOnInit(): void {
     
@@ -61,4 +64,5 @@ export class ModagrhabComponent implements OnInit {
     this.form.reset();
   }
 
+  
 }

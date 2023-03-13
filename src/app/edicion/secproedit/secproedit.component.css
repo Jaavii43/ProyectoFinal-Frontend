@@ -2,14 +2,28 @@ section.proyectos{
     background-color: rgb(78, 90, 82)
   }
   
-  div.col-2{
+div.col-2{
     text-align: center;
     font-weight: bold;
   }
+
+div.seccionedit{
+    background-color: rgb(133, 138, 134);
+  }
   
-  .row{
+li.list-group-item{
+    background-color: rgb(133, 138, 134);
+    --bs-list-group-border-width: 0px;
+  }
+
+list-group-item{
+    border: 0 rem
+  }
+    
+.row{
     --bs-gutter-x:0rem;
   }
-  h2{
+
+h2{
     background-color: rgb(133, 138, 134);
   }

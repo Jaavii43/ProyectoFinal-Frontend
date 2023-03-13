@@ -1,12 +1,21 @@
-<!-- Section Edicion proyectos -->
+<!-- Section dashboard proyectos -->
 <section id="editproyectos" class="proyectos">
-  <div class="container ">
+  <div class="container pb-2">
        <div class="row">
-          <div class="col-10 mt-3 text-left">
+          <div class="col-10 mt-3 text-left mb-1 seccionedit">
             <h2>Proyectos Realizados</h2>
           </div>
-          <div class="col-2 mt-3">
-            <app-botonagregarproy></app-botonagregarproy>
+          <div class="col-2 mt-3 mb-1 seccionedit ml-5">
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item">
+                <i class="fa-solid fa-file-circle-plus" type="button" data-bs-toggle="modal" data-bs-target="#ModalAgregarProyecto" ></i>
+              </li>
+              <app-modagrproy></app-modagrproy>
+              <li class="list-group-item ">
+                <i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#ModalEditarProyecto" ></i>
+            </li>
+            <app-modaledicionproyectos></app-modaledicionproyectos>
+          </ul>
           </div>
         </div>  
         <div class="proyecto" *ngFor="let proyectos of proy">
@@ -22,7 +31,7 @@
             </div>
           </div> 
           <div class="row" >  
-                  <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{proyectos.tiempo_ejecucion}}</span></b></h3>                             
+            <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{proyectos.tiempo_ejecucion}}</span></b></h3>                             
           </div>
           <hr> 
         </div>         

@@ -1,0 +1,39 @@
+<!-- Section 1 -->
+<section id="section1" class="sobre-mi">
+  <div class="container-fluid text-center">
+    <div class="row mt-xl-5">
+      <div class="col-3">
+      </div>
+      <div class="col-6 mt-3">
+        <div class="area container-fluid">
+          ⚠ PortFolio ⚠
+         </div> 
+      </div>
+      <div class="col-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 mt-2">
+        <div class="row" >
+          <div class="col-2"></div>
+          <div class="col-8"><img src="./assets/img/Estado.jpg" class="rounded-circle w-50" alt="..." title="..."></div>
+          <div class="col-2"></div>
+        </div>
+        <div class="row nombre">
+          <h5>{{sobremi.nombre}}</h5> <br>
+          <h6>{{sobremi.posicion}}</h6>
+        </div>
+      </div>
+        <div class="col-6 mt-4">
+          <h5>{{sobremi.descripcion}}</h5>
+              <li class="list-group-item"><i class="fa-regular fa-pen-to-square" type="button" data-bs-toggle="modal" data-bs-target="#ModalEditSobremi"></i></li>
+              <app-modeditsobremi></app-modeditsobremi>
+        </div>
+        <div class="col-3">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+<!-- Fin Section 1 -->

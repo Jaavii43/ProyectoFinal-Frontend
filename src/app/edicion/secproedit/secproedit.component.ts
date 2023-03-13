@@ -14,10 +14,10 @@ export class SecproeditComponent implements OnInit {
   constructor(public proyectosservice: ProyectosService) { }
 
   ngOnInit(): void {
-    this.cargarEducacion();
+    this.cargarProyecto();
   }
 
-  cargarEducacion():void{
+  cargarProyecto():void{
     this.proyectosservice.list().subscribe(data =>(this.proy=data))
   }
 
@@ -27,7 +27,7 @@ export class SecproeditComponent implements OnInit {
       },
       () => {
         alert("Se elimino la educacion")
-        this.cargarEducacion()
+        this.cargarProyecto()
       })
       }
 

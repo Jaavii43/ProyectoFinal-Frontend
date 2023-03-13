@@ -7,10 +7,13 @@ i.fa-brands.fa-facebook:hover{
 }
 i.fa-brands.fa-instagram:hover{
     color: #C13584;
+    border-bottom-left-radius: 18%;
+    border-top-left-radius: 18%;   
 }
 li.list-group-item{
     background-color: rgb(35, 190, 118);
-    height: 2.5rem ;     
+    height: 2.5rem ;
+  
 }
 li.facebook{
     border-top-right-radius:0% !important;
