@@ -27,9 +27,11 @@ export class ModeditsobremiComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.cargarSobremi();
+  
   }
 
-  cargarTrabajo(): void {
+  cargarSobremi(): void {
     this.sobremiservice.list().subscribe(
       data => {
         this.sobremi = data;
@@ -71,7 +73,7 @@ export class ModeditsobremiComponent implements OnInit {
     this.sobremiservice.eliminarSobremi(id).subscribe(
       db => {
           alert("se pudo eliminar satisfactoriamente")
-          this.cargarTrabajo()
+          this.cargarSobremi()
         },
         error => {
         alert("No se pudo eliminar")

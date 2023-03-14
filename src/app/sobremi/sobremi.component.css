@@ -14,8 +14,8 @@ div.row.nombre{
 /* Banner */
 
 .area{
-  text-align:center;
-  font-size:3em;
+  
+  font-size:calc(1rem + 1vw);
   color:#fff;
   letter-spacing: 0px;
   font-weight:70px;

@@ -18,7 +18,7 @@ div.row.nombre{
   font-size: calc(1rem + 1vw);
   color:#fff;
   letter-spacing: 0px;
-  font-weight:600;
+  font-weight:70px;
   animation:blur .75s ease-out infinite;
   text-shadow:0px 0px 5px #fff,
       0px 0px 7px #fff;
