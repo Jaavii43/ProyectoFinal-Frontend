@@ -15,30 +15,30 @@ export class SobremiService {
     throw new Error('Method not implemented.');
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   public getSobremi():Observable<Sobremi>{
-    return this.http.get<Sobremi>(this.url+'traer/ver');
+    return this.httpClient.get<Sobremi>(this.url+'traer/ver');
 
   }
 
-  public verSobremi(): Observable<Sobremi[]> {
-    return this.http.get<Sobremi[]>(this.url + `ver`);
+  public list(): Observable<Sobremi[]> {
+    return this.httpClient.get<Sobremi[]>(this.url + `ver`);
   }
 
-  public verSobremis(id: number): Observable<Sobremi> {
-    return this.http.get<Sobremi>(this.url + `ver/${id}`);
+  public detail(id: number): Observable<Sobremi> {
+    return this.httpClient.get<Sobremi>(this.url + `ver/` + id);
   }
 
   public agregarSobremi(per: Sobremi): Observable<any> {
-    return this.http.post<Sobremi>(this.url + `new`, per);
+    return this.httpClient.post<Sobremi>(this.url + `new`, per);
   }
 
   public eliminarSobremi(id: number): Observable<Sobremi> {
-    return this.http.delete<Sobremi>(this.url + `delete/` + id);
+    return this.httpClient.delete<Sobremi>(this.url + `delete/` + id);
   }
   
   public editarSobremi(per: Sobremi): Observable<any> {
-    return this.http.put<Sobremi>(this.url + `editar/$`, per);
+    return this.httpClient.put<Sobremi>(this.url + `editar/`, per);
   }
 }
