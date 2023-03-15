@@ -4,27 +4,24 @@
     <div class="row mt-5">
       <div class="col-3">
       </div>
-      <div class="col-6 mt-3 area">
+      <div class="col-9 mt-3 area">
         ⚠ PORTFOLIO ⚠        
       </div>
-      <div class="col-3">
-      </div>
+
     </div>
+    <div class="sobremi" *ngFor="let sobremi of sobremi">
     <div class="row">
       <div class="col-3 mt-2">
         <div class="row" >
           <div class="col-2"></div>
-          <div class="col-8"><img src="./assets/img/Estado.jpg" class="rounded-circle w-50" alt="..." title="..."></div>
+          <div class="col-8"><img [src]=sobremi.imagen class="rounded-circle w-50" alt="..." title="foto perfil"></div>
           <div class="col-2"></div>
         </div>
-        <div class="row nombre">
-          <h5>{{sobremi.nombre}}</h5> <br>
+        <div class="row">
+          <h5>{{sobremi.nombre}}</h5> 
           <h6>{{sobremi.posicion}}</h6>
-        </div>
-      </div>
-        <div class="col-6 mt-4">
-          <h5>{{sobremi.descripcion}}</h5>
           <ul class="list-group-horizontal list-group">
+            <li class="list-group-item"></li>
             <li class="list-group-item"><i class="fa-regular fa-pen-to-square" type="button" data-bs-toggle="modal" data-bs-target="#ModalAgregarSobremi"></i></li>
               <app-modeditsobremi></app-modeditsobremi>
             <li class="list-group-item ">
@@ -33,11 +30,15 @@
               <app-modaledicionsobremi></app-modaledicionsobremi>
             </ul>
         </div>
-        <div class="col-3">
-        </div>
       </div>
+        <div class="col-9 mt-4">
+          <h5>{{sobremi.descripcion}}</h5>
+        </div>
+
+      </div>
+    </div>
     </div>
   </section>
   
   
-<!-- Fin Section 1 -->
+<!-- Fin Seccion -->

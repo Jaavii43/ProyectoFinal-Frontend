@@ -55,7 +55,8 @@
              </p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" type="submit" (click)="guardar()" [disabled]="form.invalid">GUARDAR DATOS</button>
+              <button class="btn btn-secondary" (click)="form.reset()">RESET</button>  
+              <button class="btn btn-secondary" type="submit" (click)="guardar()" [disabled]="form.invalid">GUARDAR DATOS</button>
               </div>   
             </div>         
         </form>

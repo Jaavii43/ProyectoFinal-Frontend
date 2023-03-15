@@ -70,7 +70,7 @@ export class ModeditsobremiComponent implements OnInit {
   }
 
   borrar(id: number) {
-    this.sobremiservice.eliminarSobremi(id).subscribe(
+    this.sobremiservice.delete(id).subscribe(
       db => {
           alert("se pudo eliminar satisfactoriamente")
           this.cargarSobremi()

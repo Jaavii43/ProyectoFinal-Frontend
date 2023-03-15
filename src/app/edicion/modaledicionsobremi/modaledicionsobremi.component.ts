@@ -27,7 +27,6 @@ export class ModaledicionsobremiComponent {
   }
 
   ngOnInit(): void {
-
     this.cargarSobremi();
   }
 
@@ -46,7 +45,7 @@ export class ModaledicionsobremiComponent {
         },
         error: (e) => {
           console.error(e)
-          alert("error al cargar trabajo")
+          alert("error al cargar info personal")
         },
         complete: () => console.info('complete aqui')
       }
@@ -70,7 +69,7 @@ export class ModaledicionsobremiComponent {
   }
 
   borrar(id: number) {
-    this.sobremiservice.eliminarSobremi(id).subscribe(
+    this.sobremiservice.delete(id).subscribe(
       db => {
           alert("se pudo eliminar satisfactoriamente")
           this.cargarSobremi()

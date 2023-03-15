@@ -3,7 +3,8 @@
     <div class="modal-content">
       <div class="modal-header">
           <h1 class="modal-title fs-5" >Modificar los datos personales</h1>
-      </div>      
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
+        </div>      
     <form [formGroup]="form" name="sobremiform" >
       <div class="modal-body">   
       <ul class="p-0">
@@ -29,17 +30,9 @@
               <span class="input-group-text border-0" id="basic-addon1">Nombre</span>
             </div>
                 <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="nombre">
-        </div>
-
-          <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre usuario</label>
-          <input type="text" class="form-control" id="nombre" placeholder="campo obligatorio" formControlName="nombre" 
-              [ngClass]="{'is-invalid': form.get('nombre')?.errors && form.get('nombre')?.touched, 'is-valid': form.get('nombre')?.errors && form.get('nombre')?.touched}">
-          <p class="text-danger" *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['required']">
-              El Nombre es requerido.
-          </p>
-      </div>
+          </div>
         <div class="posicion">
+          <label for="posicion" class="form-label">Titulo Personal</label>
           <input type="text" class="form-control" id="posicion" placeholder="campo obligatorio" formControlName="posicion" 
           [ngClass]="{'is-invalid': form.get('posicion')?.errors && form.get('posicion')?.touched, 'is-valid': form.get('posicion')?.errors && form.get('posicion')?.touched}">
       <p class="text-danger" *ngIf="form.get('posicion')?.touched && form.get('posicion')?.errors?.['required']">
@@ -47,7 +40,7 @@
       </p>
         </div>
         <div class="descripcion">
-          <label for="TituloAdquirido" class="form-label">Descripcion personal</label>
+          <label for="Descripcion" class="form-label">Descripcion personal</label>
           <textarea class="form-control" id="descripcion" placeholder="campo obligatorio" 
               formControlName="descripcion"
               [ngClass]="{'is-invalid': form.get('descripcion')?.errors && form.get('descripcion')?.touched, 
@@ -55,24 +48,25 @@
           </textarea>
           <p class="text-danger"
               *ngIf="form.get('descripcion')?.touched && form.get('descripcion')?.errors?.['required']">
-              Una descripción de lo aprendido es requerida.
+              Una descripción es requerida.
           </p>
       </div>
       <div class="mb-3">
-              <label for="TituloAdquirido" class="form-label">Titulo adquirido</label>
-              <textarea class="form-control" id="titulo" placeholder="campo obligatorio"
-                  formControlName="titulo"
-                  [ngClass]="{'is-invalid': form.get('titulo')?.errors && form.get('titulo')?.touched, 
-                  'is-valid': form.get('titulo')?.errors && form.get('titulo')?.touched}">
+              <label for="TituloAdquirido" class="form-label">Url de la Imagen de Perfil</label>
+              <textarea class="form-control" id="imagen" placeholder="campo obligatorio"
+                  formControlName="imagen"
+                  [ngClass]="{'is-invalid': form.get('imagen')?.errors && form.get('imagen')?.touched, 
+                  'is-valid': form.get('imagen')?.errors && form.get('imagen')?.touched}">
               </textarea>
               <p class="text-danger"
-                  *ngIf="form.get('titulo')?.touched && form.get('titulo')?.errors?.['required']">
-                  Una descripción del trabajo es requerida.
+                  *ngIf="form.get('imagen')?.touched && form.get('imagen')?.errors?.['required']">
+                  Url de la Imagen de Perfil
               </p>
           </div>
 
           <div class="modal-footer">
-              <button class="btn btn-secondary" type="submit" [disabled]="form.invalid">GUARDAR DATOS</button>
+            <button class="btn btn-secondary" (click)="form.reset()">RESET</button>
+              <button class="btn btn-secondary" type="submit"  (click)="guardar()" >GUARDAR DATOS</button>
             </div>   
       </div>       
       </form>

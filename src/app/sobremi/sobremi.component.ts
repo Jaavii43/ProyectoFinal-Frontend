@@ -9,14 +9,19 @@ import { SobremiService } from '../services/sobremi.service';
 })
 export class SobremiComponent implements OnInit {
 
-  sobremi: Sobremi = new Sobremi("","","","","","");
+  sobremi: Sobremi[]=[];
   
-  constructor(public SobremiService: SobremiService){
+  constructor(public sobremiService: SobremiService){
 
    }
   ngOnInit(): void {
-        this.SobremiService.getSobremi().subscribe(data=>{this.sobremi=data})
-      };
+      this.cargarSobremi(); 
+      }
+      
+  cargarSobremi():void{
+      this.sobremiService.list().subscribe(data=>{this.sobremi=data})
   }
+
+}
 
 

@@ -10,13 +10,14 @@ import { SobremiService } from 'src/app/services/sobremi.service';
 })
 export class SobremieditComponent implements OnInit {
 
-  sobremi: Sobremi = new Sobremi("","","","","","");
-
+  sobremi: Sobremi[]=[];
   constructor(public sobremiservice: SobremiService) { }
 
   ngOnInit(): void {
-
-    this.sobremiservice.getSobremi().subscribe(data=>{this.sobremi=data})
+      this.cargarSobremi();    
   }
 
+  cargarSobremi():void{
+    this.sobremiservice.list().subscribe(data=>{this.sobremi=data})
+  }
 }

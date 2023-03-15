@@ -5,9 +5,16 @@ section.sobre-mi{
     color: rgb(231, 39, 39);
     text-shadow: rgb(243, 239, 239) 0.1em 0.1em 0.2em
 }
-div.row.nombre{
+h5{
   color: rgb(255, 255, 255);
   text-shadow: rgb(0, 0, 0) 0.5em 0.5em 0.5em;
+}
+h6{
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(0, 0, 0) 0.5em 0.5em 0.5em;
+}
+ul{
+  color: black;
 }
 
 
@@ -47,8 +54,12 @@ div.row.nombre{
 li.list-group-item{
   background-color: transparent;
   --bs-list-group-border-width: 0px;
+  --bs-list-group-color: #ffc107;
+  padding-left: 15%;
+  
 }
 
 list-group-item{
   border: 0 rem
+
 }

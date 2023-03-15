@@ -12,6 +12,7 @@ import { TrabajosService } from '../services/trabajos.service';
 export class TrabajosComponent implements OnInit {
 
   trabajo: Trabajos[]=[];
+  
   constructor(public trabajosservice: TrabajosService) { }
 
   ngOnInit(): void {
