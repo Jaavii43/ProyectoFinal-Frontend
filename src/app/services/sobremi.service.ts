@@ -8,7 +8,7 @@ import { Sobremi } from '../model/sobremi';
 })
 export class SobremiService {
   
-  url = "http://localhost:8080/sobremi/"
+  url = "https://portfoliojavier.onrender.com/sobremi/"
     
   constructor(private httpClient: HttpClient) { }
 

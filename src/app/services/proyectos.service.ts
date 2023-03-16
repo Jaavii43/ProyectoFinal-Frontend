@@ -8,7 +8,7 @@ import { Proyectos } from '../model/proyectos';
 })
 export class ProyectosService {
 
-  URL = "http://localhost:8080/proyectos/"
+  URL = "https://portfoliojavier.onrender.com/proyectos/"
   constructor(private httpClient:HttpClient) { }
 
   public list():Observable<Proyectos[]>{
