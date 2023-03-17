@@ -20,7 +20,9 @@ div.col-2{
 .row{
     --bs-gutter-x:0rem;
   }
-li.list-group-item{
+/* Esto lo saque del inspeccionador para los botones */
+
+  li.list-group-item{
     background-color: rgb(133, 138, 134);
     --bs-list-group-border-width: 0px;
 }

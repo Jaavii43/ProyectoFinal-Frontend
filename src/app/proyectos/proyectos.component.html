@@ -1,20 +1,22 @@
 <section id="proyectos" class="proyectos">
-    <div class="container pb-2">
-        
+    <div class="container pb-2">        
       <div class="row">
               <div class="col-12 mt-3 text-left">
                 <h2><b>Proyectos Realizados</b></h2>
               </div>
       </div>
       <div class="proyecto" *ngFor="let proyectos of proyecto">
-                <div class="row">
-                  <h3><b style="letter-spacing: 0px;"><span style="font-size: 25px;">{{proyectos.sector}}</span></b></h3>
-                  <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{proyectos.tipo}}</span></b></h3>
-                </div>
-                <div class="row" >  
-                        <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{proyectos.tiempo_ejecucion}}</span></b></h3>                             
-                </div>
+        <div class="row">
+          <h2><b style="letter-spacing: 0px;">Rama o tipo de proyecto realizado</b></h2>
+          <h3><b style="letter-spacing: 0px;"><span style="font-size: 25px;">{{proyectos.sector}}</span></b></h3>
+          <h2><b style="letter-spacing: 0px;">Pequeña descripcion del mismo</b></h2>
+          <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{proyectos.tipo}}</span></b></h3>
         </div>
-        <hr>    
+        <div class="row" >  
+          <h2><b style="letter-spacing: 0px;">Tiempo empleado para la realizacion</b></h2>
+          <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{proyectos.tiempo_ejecucion}}</span></b></h3>                             
+        </div>
       </div>
+      <hr>    
+    </div>
 </section>
