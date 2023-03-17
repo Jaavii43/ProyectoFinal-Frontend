@@ -8,7 +8,7 @@ import { Trabajos } from '../model/trabajos';
 })
 export class TrabajosService {
 
-  URL = "http://localhost:8080/trabajos/"
+  URL = "https://portfoliojavier.onrender.com/trabajos/"
 
   constructor(private httpClient:HttpClient) { }
     

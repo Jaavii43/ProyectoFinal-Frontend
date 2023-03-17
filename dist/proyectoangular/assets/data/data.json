@@ -1,0 +1,16 @@
+{
+    "name": "Javier Toro",
+    "posicion": "Tecnico en Electronica",
+    "imagen": "./assets/img/Estado.jpg",
+    "sobremi": "Entusiasta de las tecnologias, siempre dispuesto a nuevos desarollos y aprendisajes de nuevas area. Soy tecnico Electronico, gran parte de mi trabajo es la reparacion de equipos de telefonia. Autoditacta en temas de programacion con algunos conocimientos en programacion",
+    "experiencias": [
+        {
+            "empleador": "Gervasoni Ingenieria",
+            "fecha": "2004 al presente",
+            "trabajo": "atencion al publico"
+        }
+    ]
+}
+
+
+
