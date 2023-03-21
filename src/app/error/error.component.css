@@ -1,0 +1,10 @@
+.navbar.navbar-expand-lg{
+    background-color: rgb(78, 90, 82)  !important;
+}
+.navbar{
+    --bs-navbar-padding-y:0 !important;
+    height: 5rem;    
+}
+div.footer{
+    background-image: url('/assets/img/background-2426328.jpg');
+}

@@ -25,19 +25,14 @@ import { SecproeditComponent } from './edicion/secproedit/secproedit.component';
 import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { TrabajosComponent } from './trabajos/trabajos.component';
 import { EstudiosComponent } from './estudios/estudios.component';
-import { BotonagregarComponent } from './edicion/botonagregar/botonagregar.component';
-import { BotagrtrabajoComponent } from './edicion/botonagregartrabajo/botagrtrabajo/botagrtrabajo.component';
 import { ModagrhabComponent } from './edicion/modagrhab/modagrhab.component';
 import { ModagrproyComponent } from './edicion/modagrproy/modagrproy.component';
 import { ModeagrestComponent } from './edicion/modeagrest/modeagrest.component';
-import { BotonagregarproyComponent } from './edicion/botonagregarproy/botonagregarproy.component';
-import { BotonagrhabComponent } from './edicion/botonagrhab/botonagrhab.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SobremiService } from './services/sobremi.service';
 import { InterceptorService } from './services/interceptor.service';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ModagretrabComponent } from './edicion/modagrtrabajo/modagretrab/modagretrab.component';
-import { BotonagrestuComponent } from './edicion/botonagrestu/botonagrestu.component';
 import { ModalEducacionComponent } from './edicion/modalPruebaEdicion/modal-educacion/modal-educacion.component';
 import { ModalEdicionHabiComponent } from './edicion/modal-edicion-habi/modal-edicion-habi.component';
 import { ModalEdicionTrabajoComponent } from './edicion/modal-edicion-trabajo/modal-edicion-trabajo.component';
@@ -70,15 +65,10 @@ import { ModaledicionsobremiComponent } from './edicion/modaledicionsobremi/moda
     HabilidadesComponent,
     TrabajosComponent,
     EstudiosComponent,
-    BotonagregarComponent,
-    BotagrtrabajoComponent,
     ModagrhabComponent,
     ModagrproyComponent,
     ModeagrestComponent,
-    BotonagregarproyComponent,
-    BotonagrhabComponent,
     ModagretrabComponent,
-    BotonagrestuComponent,
     ModalEducacionComponent,
     ModalEdicionHabiComponent,
     ModalEdicionTrabajoComponent,
