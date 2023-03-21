@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Habilidade } from '../model/habilidade';
-import { HabilidadService } from '../services/habilidad.service';
+import { Habilidade } from 'src/app/model/habilidade';
+import { HabilidadService } from 'src/app/services/habilidad.service';
+
 
 @Component({
   selector: 'app-habilidades',

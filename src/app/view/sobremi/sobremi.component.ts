@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Sobremi } from '../model/sobremi';
-import { SobremiService } from '../services/sobremi.service';
+import { Sobremi } from 'src/app/model/sobremi';
+import { SobremiService } from 'src/app/services/sobremi.service';
+
 
 @Component({
   selector: 'app-sobremi',
