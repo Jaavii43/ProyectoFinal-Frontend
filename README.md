@@ -9,12 +9,28 @@ Se desarrollo una web principal de libre acceso y una web de edicion, estilo das
 ## Tecnologias utilizadas
 
 Se listan los lenguajes utilizados en el ***frontend***:
-* [Visual Studio Code](https://code.visualstudio.com/): Version 1.75
+* [Visual Studio Code](https://code.visualstudio.com/): Version 1.76.2
 * [HTML5](https://developer.mozilla.org/es/docs/Web/HTML)
 * [CSS3](https://developer.mozilla.org/es/docs/Web/CSS)
-* [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/): Version 5.0
+* [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/): Version 5.2.0
 * [TypeScript](https://www.typescriptlang.org/)
-* [Angular](https://angular.io/): Version 14
+* [Angular](https://angular.io/): Version 15.1.4
 * [Firebase](https://firebase.google.com/)
-* [Imgbb](https://imgbb.com/)
+
+## Desarrollo
+
+Primero se instala VisualStudio Code siguiendo los pasos de los videos del curso, se instalan tambien las extensiones recomendadas, siendo la de angular Schematic la mas utilizada para crea los componentes.
+Primeramente se realiza el maquetado HTML puro ya pensando en secciones para despues poder pasar a Angular.
+Se crea un estructura de carpetas pensando en componentes, tambien separando la parte de edicion y visualisacion.
+Se hacen pruebas con ```$ ng serve``` y con la parte de backend junto con una base de datos local.
+
+## Deploy
+
+Se realiza el deploy en ###Firebase segun videos e instructivos tanto como del curso y dela web.
+Para hacer el deploy se instala las tools de ###Firebase en VisualStudio Code. Despues se hace el sicronizmo entre VisualStudio y Firebase.
+Despues se utilizan los comandos:
+```$ ng build```
+
+```$ firebase deploy```
+Para podes seguir modificando el FrontEnd y actualizando los cambios en FireBase.
 
