@@ -1,27 +1,20 @@
-# Proyectoangular
+# Proyecto Portfolio Argentina Programa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+## Resumen
 
-## Development server
+La idea general del proyecto es poder crear un Porfolio, que se pueda editar cualquier dato del mismo.
+Este es un proyecto integrador que incluye tanto la parte de Frontend como la de Backend para el curso de Argentina Programa, Programador Web FullStack.
+Se desarrollo una web principal de libre acceso y una web de edicion, estilo dashboard al la cual hay que acceder mediante un login definidos en la base de datos, y en el cual se puede realizar CRUD (Create-Read-Update-Delete).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias utilizadas
 
-## Code scaffolding
+Se listan los lenguajes utilizados en el ***frontend***:
+* [Visual Studio Code](https://code.visualstudio.com/): Version 1.75
+* [HTML5](https://developer.mozilla.org/es/docs/Web/HTML)
+* [CSS3](https://developer.mozilla.org/es/docs/Web/CSS)
+* [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/): Version 5.0
+* [TypeScript](https://www.typescriptlang.org/)
+* [Angular](https://angular.io/): Version 14
+* [Firebase](https://firebase.google.com/)
+* [Imgbb](https://imgbb.com/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
