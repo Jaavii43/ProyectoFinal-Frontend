@@ -26,11 +26,18 @@ Se hacen pruebas con ```$ ng serve``` y con la parte de backend junto con una ba
 
 ## Deploy
 
-Se realiza el deploy en ###Firebase segun videos e instructivos tanto como del curso y dela web.
-Para hacer el deploy se instala las tools de ###Firebase en VisualStudio Code. Despues se hace el sicronizmo entre VisualStudio y Firebase.
+Se realiza el deploy en Firebase segun videos e instructivos tanto como del curso y dela web.
+Para hacer el deploy se instala las tools de Firebase en VisualStudio Code. Despues se hace el sicronizmo entre VisualStudio y Firebase.
 Despues se utilizan los comandos:
 ```$ ng build```
 
 ```$ firebase deploy```
 Para podes seguir modificando el FrontEnd y actualizando los cambios en FireBase.
+
+## Agradecimientos
+
+* Al canal de youtube *** ProgramTk y a todos los que trabajaron en los videos y brindaron su tiempo en enseñar.
+* A Argentina Programa por brindar la posibilidad de poder hacer este curso sin costos.
+* A mi Familia por apoyarme.
+
 
