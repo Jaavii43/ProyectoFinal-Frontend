@@ -1,7 +1,45 @@
-.navbar.navbar-expand-lg.bg-dark{
+nav.menu{
+    position:fixed;
+        top:0;
+    width:100%;
+    z-index:1200;
     background-color: rgb(78, 90, 82)  !important;
 }
 .navbar{
     --bs-navbar-padding-y:0 !important;
     height: 3.5rem;  
 }
+.navbar>.container-fluid{
+    flex-wrap: nowrap;
+}
+
+.nav-link{
+    text-decoration: none;
+    color:#d9d5d5 !important;
+  }
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  .flotante{
+    float:left;
+    position:fixed;
+  }
+  .lateral{
+    display: block;
+    margin: 0;
+    padding: 3rem 0;
+    transform: rotateZ(-90deg)
+  }
+  
+  .scroll{
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+  }
+    
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }

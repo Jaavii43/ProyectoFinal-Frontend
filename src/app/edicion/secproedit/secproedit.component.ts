@@ -22,6 +22,7 @@ export class SecproeditComponent implements OnInit {
   }
 
   delete(id:number){    
+    if (confirm("Seguro quieres borrar?")) {
     this.proyectosservice.delete(id).subscribe(
       bd => {          
       },
@@ -30,6 +31,6 @@ export class SecproeditComponent implements OnInit {
         this.cargarProyecto()
       })
       }
-
+    }
 
 }

@@ -21,7 +21,8 @@ export class SechabeditComponent implements OnInit {
   }
 
   delete(id:number){    
-      this.habilidadservice.delete(id).subscribe(
+    if (confirm("Seguro quieres borrar?")) {  
+    this.habilidadservice.delete(id).subscribe(
         bd => {          
         },
         () => {
@@ -29,5 +30,5 @@ export class SechabeditComponent implements OnInit {
           this.cargarHabilidad()
         })
         }
-     
+      }
 }

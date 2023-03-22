@@ -1,13 +1,21 @@
-<nav class="navbar navbar-expand-lg bg-dark fixed-top">
-<!--Botones de redes Sociales -->
-    <div class="container-fluid">
-        <a class="navbar-brand" >
-            <img src="./assets/img/APLogo-20-20.png" alt="" width="15%" height="">
+
+<nav class="navbar menu navbar-expand-md">
+    <!--Botones de redes Sociales -->
+      <div class="container-fluid">
+        <a class="navbar-brand">
+          <img src="./assets/img/APLogo-20-20.png" alt="Logo Argentina Programa" width="15%">
         </a>
-        <ul class="list-group list-group-horizontal">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" 
+      aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-sharp fa-solid fa-bars fa-beat" style="color: #ffffff;"></i>
+        </button>
+        <!-- iconos colapsables -->
+        <div class="collapse navbar-collapse" id="menuNav">
+        <!--ICONOS NAVBAR-->
+          <ul class="list-group list-group-horizontal ms-auto">
             <app-redes></app-redes>
             <app-bottonlogout></app-bottonlogout>
-        </ul>
-    </div>
-<!-- Fin Botones de redes Sociales -->
-</nav>
+          </ul> 
+        </div>
+      </div>
+    </nav>

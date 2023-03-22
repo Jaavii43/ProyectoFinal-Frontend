@@ -1,0 +1,13 @@
+/* Boton user*/
+i.fa-solid.fa-user:hover{
+    color: #C13584;
+
+}
+li.list-group-item{
+    background-color: rgb(35, 190, 118);
+    height: 2.5rem ;
+}
+li.logout{
+    border-bottom-right-radius: 18%;
+    border-top-right-radius: 18%;
+}

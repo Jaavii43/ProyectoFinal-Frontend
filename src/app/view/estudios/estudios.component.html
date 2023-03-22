@@ -9,12 +9,15 @@
       </div>
       <div class="cursado" *ngFor="let educacion of educa">
         <div class="row">
-                  <h3><b style="letter-spacing: 0px;"><span style="font-size: 25px;">{{educacion.escuela}}</span></b></h3>
-                  <h3><b style="letter-spacing: 0px;"><span style="font-size: 20px;">{{educacion.descripcion}}</span></b></h3>
+          <h2><b style="letter-spacing: 0px;"><span style="font-size: 15px; background: dimgrey;">Nombre del establecimiento:</span></b></h2>        
+          <h3><b style="letter-spacing: 0px;"><span style="font-size: 25px;">{{educacion.escuela}}</span></b></h3>
+          <h2><b style="letter-spacing: 0px;"><span style="font-size: 15px; background: dimgrey;">Descripcion de lo estudiado:</span></b></h2>
+          <h3><b style="letter-spacing: 0px;"><span style="font-size: 20px;">{{educacion.descripcion}}</span></b></h3>
         </div>
         <div class="row" >  
-          <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{educacion.fecha_fin}}</span></b></h3>
-          <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{educacion.fecha_inicio}} - {{educacion.titulo}}</span></b></h3>                
+          <h2><b style="letter-spacing: 0px;"><span style="font-size: 15px; background: dimgrey;">Titulo adquirido:</span></b></h2>
+          <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{educacion.titulo}}</span></b></h3>
+          <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">Fecha de inicio {{educacion.fecha_inicio}} - fecha de finalizacion {{educacion.fecha_fin}}</span></b></h3>                
         </div>
             <hr>
         </div>

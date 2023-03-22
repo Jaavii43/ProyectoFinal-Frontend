@@ -2,23 +2,26 @@
 <section id="trabajos" class="trabajos">
     <div class="container pb-2">
         <div class="row">
-            <div class="col-12 mt-3 text-left trabajos">
-                <h2><b>Experiencias Laborales</b></h2>
+            <div class="col-12 mt-3 text-left mb-1 trabajos">
+                <h2>Experiencias Laborales</h2>
             </div>
-            <div class="experiencia" *ngFor="let trabajos of trabajo">
+        </div>
+       <div class="experiencia1" *ngFor="let trabajos of trabajo">
+            <div class="row">
+                <div class="col-9">
+                    <h3><b style="letter-spacing: 0px;">{{trabajos.empresa}} </b></h3>
+                </div>
                 <div class="row">
-                    <div class="col-9">
-                        <h3><b style="letter-spacing: 0px;">{{trabajos.empresa}}</b></h3>
-                        <h3><b style="letter-spacing: 0px;"><span style="font-size: 15px;">Desde de el {{trabajos.fecha_inicio}} hasta el {{trabajos.fecha_fin}}</span></b></h3>
-                    </div>
+                    <h2><b style="letter-spacing: 0px;"><span style="font-size: 15px; background: dimgrey;">Fechas en que se realizo estos trabajos:</span></b></h2>
+                    <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">Desde el {{trabajos.fecha_inicio}} - Hasta el {{trabajos.fecha_fin}}</span></b></h3>
                 </div>
-                <div class="row" >  
-                    <h5><b style="letter-spacing: 0px;">Descripcion de los trabajos realizados:</b></h5>
-                    <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{trabajos.trabajo}}</span></b></h3>
-                </div>
-                <hr> 
-            </div>
-        </div>       
-    </div>    
+                <div class="row" >
+                    <h4><b style="letter-spacing: 0px;"><span style="font-size: 15px;background: dimgrey;">Trabajos realizados en esta empresa:</span></b></h4>
+                    <h4><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{trabajos.trabajo}}</span></b></h4>
+                </div>                 
+               </div>       
+           <hr> 
+       </div> 
+   </div>  
   </section>
   <!-- Fin Section Trabajos -->

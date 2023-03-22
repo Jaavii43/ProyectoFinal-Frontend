@@ -22,6 +22,7 @@ export class SecedueditComponent implements OnInit {
   }
 
   delete(id:number){    
+    if (confirm("Seguro quieres borrar?")) {
     this.educacionservice.delete(id).subscribe(
       bd => {          
       },
@@ -30,5 +31,5 @@ export class SecedueditComponent implements OnInit {
         this.cargarEducacion()
       })
       }
-
+    }
 }

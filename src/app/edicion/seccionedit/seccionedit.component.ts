@@ -21,14 +21,15 @@ export class SeccioneditComponent implements OnInit {
     this.trabajosservice.list().subscribe(data =>(this.trabajo=data))
   }
   delete(id:number){    
+    if (confirm("Seguro quieres borrar?")) {
     this.trabajosservice.delete(id).subscribe(
       bd => {          
       },
       () => {
-        alert("Se elimino la Ecperiencia")
+        alert("Se elimino la experiencia laboral")
         this.cargarTrabajo()
       })
       }
-   
+    }
 
 }
