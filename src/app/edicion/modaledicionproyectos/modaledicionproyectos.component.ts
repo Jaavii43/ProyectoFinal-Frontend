@@ -13,6 +13,7 @@ export class ModaledicionproyectosComponent {
   form: FormGroup;
   proyectos: Proyectos[] = [];
   proy:any;
+  disabledValue = true;
   
   constructor(private formBuilder: FormBuilder, private proyectoservice: ProyectosService){
     
@@ -40,6 +41,7 @@ export class ModaledicionproyectosComponent {
       {
         next: (info) => {
           this.form.setValue(info);
+          this.disabledValue=false;
         },
         error: (e) => {
           console.error(e)

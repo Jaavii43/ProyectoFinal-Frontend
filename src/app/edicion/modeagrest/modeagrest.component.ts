@@ -61,7 +61,7 @@ export class ModeagrestComponent implements OnInit {
       }, 
         ()=>{alert("Nueva educacion creada"); 
           this.form.reset()
-          location.reload()}
+          window.location.reload()}
         );
   }
 

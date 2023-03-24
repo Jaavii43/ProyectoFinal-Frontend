@@ -13,6 +13,7 @@ export class ModalEdicionTrabajoComponent {
   form: FormGroup;
   trabajos: Trabajos [] = [];
   tra:any;
+  disabledValue = true;
   
   constructor(private formBuilder: FormBuilder, private trabajosservice: TrabajosService){
     
@@ -41,6 +42,7 @@ export class ModalEdicionTrabajoComponent {
       {
         next: (info) => {
           this.form.setValue(info);
+          this.disabledValue=false;
         },
         error: (e) => {
           console.error(e)
@@ -61,9 +63,9 @@ export class ModalEdicionTrabajoComponent {
         },
           error: (e) => console.error(e),
           complete: () => console.info('complete')
-        });
-      window.location.reload();
+        });      
       console.log("Se modificó correctamente el item");
+      window.location.reload();
  
   }
 

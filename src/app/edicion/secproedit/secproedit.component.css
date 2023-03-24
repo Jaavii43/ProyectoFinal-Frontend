@@ -9,7 +9,7 @@ div.col-2{
 
 div.seccionedit{
     background-color: rgb(133, 138, 134);
-  }
+}
   
 li.list-group-item{
     background-color: rgb(133, 138, 134);
@@ -24,6 +24,3 @@ list-group-item{
     --bs-gutter-x:0rem;
   }
 
-h2{
-    background-color: rgb(133, 138, 134);
-  }

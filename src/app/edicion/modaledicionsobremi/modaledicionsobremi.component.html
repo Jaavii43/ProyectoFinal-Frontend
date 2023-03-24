@@ -1,6 +1,6 @@
 
 <div class="modal fade" id="ModalAgregarPersona" tabindex="-1" aria-labelledby="ModalAgregarPersona">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
             <h1 class="modal-title fs-5" >Modificar los datos de acceso</h1>
@@ -35,7 +35,7 @@
           </div>
           <div class="email">
             <label for="clave" class="form-label">Modifique el correo de acceso</label>
-            <input type="text" class="form-control" id="email" placeholder="campo obligatorio" formControlName="email" 
+            <input type="text" class="form-control" [readOnly]="disabledValue" id="email" placeholder="campo obligatorio" formControlName="email" 
             [ngClass]="{'is-invalid': form.get('email')?.errors && form.get('email')?.touched, 
             'is-valid': form.get('email')?.errors && form.get('email')?.touched}">
         <p class="text-danger" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['required']">
@@ -44,7 +44,7 @@
           </div>
           <div class="clave">
             <label for="clave" class="form-label">Edite la clave o cree una nueva</label>
-            <input type="text" class="form-control" id="clave" placeholder="campo obligatorio" formControlName="clave"
+            <input type="text" class="form-control" [readOnly]="disabledValue" id="clave" placeholder="campo obligatorio" formControlName="clave"
                 [ngClass]="{'is-invalid': form.get('clave')?.errors && form.get('clave')?.touched, 
                 'is-valid': form.get('clave')?.errors && form.get('clave')?.touched}">
             <p class="text-danger"

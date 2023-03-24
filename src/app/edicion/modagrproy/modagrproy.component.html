@@ -1,5 +1,5 @@
-<div class="modal fade" id="ModalAgregarProyecto" tabindex="-1" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog">
+<div class="modal fade" id="ModalAgregarProyecto" tabindex="-1" aria-labelledby="ModalAgregarProyecto">
+  <div class="modal-dialog modal-dialog-centered">
   <div class="modal-content">    
     <div class="modal-header">
       <h1 class="modal-title fs-5" id="exampleModalLabel">Proyectos</h1>
@@ -26,9 +26,12 @@
               </div>
             <div class="mb-3">
               <label for="tipo" class="form-label">Una pequeña descripcion de lo realizado:  </label>
-              <input type="text" class="form-control" placeholder="campo obligatorio" id="tipo" formControlName="tipo" [(ngModel)]="tipo"
-              [ngClass]="{'is-invalid': form.get('tipo').errors && form.get('tipo').touched, 'is-valid': !form.get('tipo').errors && form.get('tipo').touched}">
-              <p class="text-danger"
+              <textarea class="form-control" id="tipo" placeholder="campo obligatorio" [(ngModel)]="tipo"
+              formControlName="tipo"
+              [ngClass]="{'is-invalid': form.get('tipo')?.errors && form.get('tipo')?.touched, 
+              'is-valid': form.get('tipo')?.errors && form.get('tipo')?.touched}">
+              </textarea>
+                 <p class="text-danger"
                 *ngIf="form.get('tipo').touched && form.get('tipo')?.errors?.['required']">
                   El tipo es requerido!
                 </p>

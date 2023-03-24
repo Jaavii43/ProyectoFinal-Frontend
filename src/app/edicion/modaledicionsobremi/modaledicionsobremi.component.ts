@@ -13,6 +13,7 @@ export class ModaledicionsobremiComponent {
   form: FormGroup;
   sobremi: Sobremi [] = [];
   sob: any;
+  disabledValue = true;
 
     constructor(private formBuilder: FormBuilder, private sobremiservice: SobremiService) { 
     this.form = this.formBuilder.group({
@@ -42,6 +43,7 @@ export class ModaledicionsobremiComponent {
       {
         next: (info) => {
           this.form.setValue(info);
+          this.disabledValue=false;
         },
         error: (e) => {
           console.error(e)

@@ -85,11 +85,15 @@ import { ModaledicionsobremiComponent } from './edicion/modaledicionsobremi/moda
             "outerStrokeWidth": 12,
             "innerStrokeWidth": 8,
             "outerStrokeColor": "#4882c2", 
-            "innerStrokeColor": "#e7e8ea",
+            "innerStrokeColor": "#d47e1c",
             "animation": true,
-            "animationDuration": 600,
+            "animationDuration": 800,
             "subtitleFontSize": '12',
-            "radius": 60       
+            "subtitleColor": "#ffffff",
+            "titleColor": "#ffffff",
+            "unitsColor": "#ffffff", 
+            "responsive": true,
+            "radius": 80       
                   }),
           ],
   providers: [SobremiService, { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }],

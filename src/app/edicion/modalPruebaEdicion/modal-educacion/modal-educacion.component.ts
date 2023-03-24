@@ -13,6 +13,7 @@ export class ModalEducacionComponent implements OnInit {
   form: FormGroup;
   educaciones: Educacion[] = [];
   edu:any;
+  disabledValue = true;
   
   constructor(private formBuilder: FormBuilder, private educacionservice: EducacionService){
     
@@ -42,6 +43,7 @@ export class ModalEducacionComponent implements OnInit {
       {
         next: (info) => {
           this.form.setValue(info);
+          this.disabledValue=false;
         },
         error: (e) => {
           console.error(e)

@@ -1,11 +1,12 @@
 <div class="modal fade" id="ModalAgregarTrabajo" tabindex="-1" aria-labelledby="ModalAgregarTrabajo">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" >Nueva Experiencia Laboral</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
         </div>
         <form [formGroup]="form" name="trabajoform" (ngSubmit)="form.valid && onCreate()">
+          <div class="modal-body">
           <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
             <div class="input-group-prepend border-0">
               <span class="input-group-text border-0" id="basic-addon1">ID:</span>
@@ -41,8 +42,8 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="submit" [disabled]="form.invalid">GUARDAR DATOS</button>
-              </div>   
-                  
+            </div>   
+          </div>        
         </form>
       </div>
     

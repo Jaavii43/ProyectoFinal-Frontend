@@ -1,7 +1,6 @@
 section.sobre-mi{
     background-image: url('/assets/img/background-2426328.jpg');
     background-size: 100%;
-    min-height: 40vh;
     color: rgb(231, 39, 39);
     text-shadow: rgb(243, 239, 239) 0.1em 0.1em 0.2em
 }

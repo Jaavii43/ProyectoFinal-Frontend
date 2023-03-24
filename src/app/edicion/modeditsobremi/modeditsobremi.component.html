@@ -1,5 +1,5 @@
 <div class="modal fade" id="ModalAgregarSobremi" tabindex="-1" aria-labelledby="ModalAgregarSobremi">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
           <h1 class="modal-title fs-5" >Modificar los datos personales</h1>
@@ -33,7 +33,7 @@
           </div>
         <div class="posicion">
           <label for="posicion" class="form-label">Titulo Personal</label>
-          <input type="text" class="form-control" id="posicion" placeholder="campo obligatorio" formControlName="posicion" 
+          <input type="text" class="form-control" [readOnly]="disabledValue" id="posicion" placeholder="campo obligatorio" formControlName="posicion" 
           [ngClass]="{'is-invalid': form.get('posicion')?.errors && form.get('posicion')?.touched, 'is-valid': form.get('posicion')?.errors && form.get('posicion')?.touched}">
       <p class="text-danger" *ngIf="form.get('posicion')?.touched && form.get('posicion')?.errors?.['required']">
           La posicion actual es requerida.
@@ -41,7 +41,7 @@
         </div>
         <div class="descripcion">
           <label for="Descripcion" class="form-label">Descripcion personal</label>
-          <textarea class="form-control" id="descripcion" placeholder="campo obligatorio" 
+          <textarea class="form-control"[readOnly]="disabledValue" id="descripcion" placeholder="campo obligatorio" 
               formControlName="descripcion"
               [ngClass]="{'is-invalid': form.get('descripcion')?.errors && form.get('descripcion')?.touched, 
               'is-valid': form.get('descripcion')?.errors && form.get('descripcion')?.touched}">
@@ -53,7 +53,7 @@
       </div>
       <div class="mb-3">
               <label for="TituloAdquirido" class="form-label">Url de la Imagen de Perfil</label>
-              <textarea class="form-control" id="imagen" placeholder="campo obligatorio"
+              <textarea class="form-control" [readOnly]="disabledValue" id="imagen" placeholder="campo obligatorio"
                   formControlName="imagen"
                   [ngClass]="{'is-invalid': form.get('imagen')?.errors && form.get('imagen')?.touched, 
                   'is-valid': form.get('imagen')?.errors && form.get('imagen')?.touched}">

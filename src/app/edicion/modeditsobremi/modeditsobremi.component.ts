@@ -13,6 +13,7 @@ export class ModeditsobremiComponent implements OnInit {
   form: FormGroup;
   sobremi: Sobremi [] = [];
   sob: any;
+  disabledValue = true;
 
   constructor(private formBuilder: FormBuilder, private sobremiservice: SobremiService) { 
     this.form = this.formBuilder.group({
@@ -43,6 +44,7 @@ export class ModeditsobremiComponent implements OnInit {
       {
         next: (info) => {
           this.form.setValue(info);
+          this.disabledValue=false;
         },
         error: (e) => {
           console.error(e)
@@ -64,8 +66,9 @@ export class ModeditsobremiComponent implements OnInit {
           error: (e) => console.error(e),
           complete: () => console.info('complete')
         });
-      window.location.reload();
+      
       console.log("Se modificó correctamente el item");
+      window.location.reload();
  
   }
 

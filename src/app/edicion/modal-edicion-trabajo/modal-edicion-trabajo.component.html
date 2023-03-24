@@ -1,7 +1,7 @@
-<div class="modal fade" id="ModalEdicionTrabajo" tabindex="-1" aria-labelledby="ModalAgregarTrabajo">
-    <div class="modal-dialog">
+<div class="modal fade" id="ModalEdicionTrabajo" tabindex="1" aria-labelledby="ModalAgregarTrabajo">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header pt-50">
           <h1 class="modal-title fs-5" >Editar Experiencias Laborales</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
         </div>
@@ -25,11 +25,9 @@
             </div>
             <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
           </div>
-
-
           <div class="mb-3">
             <label for="empresa" class="form-label">Empresa en la que se realizo el trabajo</label>
-            <input type="text" class="form-control" id="empresa" placeholder="campo obligatorio" formControlName="empresa"
+            <input type="text" class="form-control" id="empresa" [readOnly]="disabledValue" placeholder="campo obligatorio" formControlName="empresa"
                 [ngClass]="{'is-invalid': form.get('empresa')?.errors && form.get('empresa')?.touched, 
                   'is-valid': form.get('empresa')?.errors && form.get('empresa')?.touched}">
             <p class="text-danger" *ngIf="form.get('empresa')?.touched && form.get('empresa')?.errors?.['required']">
@@ -37,16 +35,16 @@
             </p>
          </div>
           <div class="fecha_inicio">
-            Fecha de inicio<input type="date" class="form-control" id="fecha_inicio" name="trip-start" formControlName="fecha_inicio"
+            Fecha de inicio<input type="date" class="form-control" [readOnly]="disabledValue" id="fecha_inicio" name="trip-start" formControlName="fecha_inicio"
               value="2018-07-22" min="1990-01-01" max="2023-12-31" >
           </div>
           <div class="fecha_fin">
-            Fecha de finalizacion<input type="date" class="form-control" id="fecha_fin" name="trip-start" formControlName="fecha_fin"
+            Fecha de finalizacion<input type="date" class="form-control" [readOnly]="disabledValue" id="fecha_fin" name="trip-start" formControlName="fecha_fin"
                   value="2018-07-22" min="1990-01-01" max="2023-12-31">
           </div>
           <div class="mb-3">
             <label for="descripcionTrabajo" class="form-label">Descripción del Trabajo realizado</label>
-            <textarea class="form-control" id="trabajo" placeholder="campo obligatorio" formControlName="trabajo"
+            <textarea class="form-control" id="trabajo" [readOnly]="disabledValue" placeholder="campo obligatorio" formControlName="trabajo"
                     [ngClass]="{'is-invalid': form.get('trabajo')?.errors && form.get('trabajo')?.touched, 
                      'is-valid': form.get('trabajo')?.errors && form.get('trabajo')?.touched}">
             </textarea>

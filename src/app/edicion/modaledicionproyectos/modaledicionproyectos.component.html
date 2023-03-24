@@ -1,6 +1,6 @@
 <!-- Modal de EDUCACION-->
 <div class="modal fade" id="ModalEditarProyecto" tabindex="-1" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">    
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Proyectos</h1>
@@ -30,7 +30,7 @@
     
                <div class="mb-3">
                 <label for="sector" class="form-label">Titulo del proyecto</label>
-                <input type="text" class="form-control" id="sector" placeholder="campo obligatorio" formControlName="sector" 
+                <input type="text" class="form-control" id="sector" [readOnly]="disabledValue" placeholder="campo obligatorio" formControlName="sector" 
                 [ngClass]="{'is-invalid': form.get('sector').errors && form.get('sector').touched, 'is-valid': !form.get('sector').errors && form.get('sector').touched}">
                 <p class="text-danger"
                   *ngIf="form.get('sector').touched && form.get('sector').errors?.['required']">
@@ -39,7 +39,7 @@
                 </div>
               <div class="mb-3">
                 <label for="tipo" class="form-label">Una pequeña descripcion de lo realizado:  </label>
-                <input type="text" class="form-control" placeholder="campo obligatorio" id="tipo" formControlName="tipo" 
+                <input type="text" class="form-control" placeholder="campo obligatorio" id="tipo" [readOnly]="disabledValue" formControlName="tipo" 
                 [ngClass]="{'is-invalid': form.get('tipo').errors && form.get('tipo').touched, 'is-valid': !form.get('tipo').errors && form.get('tipo').touched}">
                 <p class="text-danger"
                   *ngIf="form.get('tipo').touched && form.get('tipo')?.errors?.['required']">
@@ -48,7 +48,7 @@
               </div>
               <div class="mb-3">
                 <label for="tiempo_ejecucion" class="form-label">Tiempo empleado para la realizacion:  </label>
-                <input type="text" class="form-control" placeholder="campo obligatorio" id="tiempo_ejecucion" formControlName="tiempo_ejecucion" 
+                <input type="text" class="form-control" placeholder="campo obligatorio" [readOnly]="disabledValue" id="tiempo_ejecucion" formControlName="tiempo_ejecucion" 
                 [ngClass]="{'is-invalid': form.get('tiempo_ejecucion').errors && form.get('tipo').touched, 'is-valid': !form.get('tiempo_ejecucion').errors && form.get('tiempo_ejecucion').touched}">
                 <p class="text-danger"
                   *ngIf="form.get('tiempo_ejecucion').touched && form.get('tiempo_ejecucion')?.errors?.['required']">

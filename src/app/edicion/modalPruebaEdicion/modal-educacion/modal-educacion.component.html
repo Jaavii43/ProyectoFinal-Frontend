@@ -1,38 +1,33 @@
 <!-- Modal de EDUCACION-->
-<div class="modal fade" id="modalEditarEducacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+<div class="modal fade" id="modalEditarEducacion" tabindex="-1" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">EDUCACIÓN</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar los estudios</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-  
+        </div>  
         <form [formGroup]="form" name="educacionform">
           <div class="modal-body">
-          
             <ul class="p-0">
               <li *ngFor="let educacion of educaciones" class="d-flex justify-content-between align-items-center m-1 ">
                 <span>{{educacion.id}} {{educacion.escuela}}</span>
                 <span class="d-flex justify-content-between gap-2">
-                <!--lapicito rojo que se cambia al tocarlo-->
-                  <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(educacion.id)">
+                   <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0" (click)="cargarDetalle(educacion.id)">
                     <i class="fa-solid fa-pen"></i>
                   </button>
                 </span>
               </li>
             </ul>
-            <!--esto es la validacion  renderizado condicional-->
             <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
               <div class="input-group-prepend border-0">
                 <span class="input-group-text border-0" id="basic-addon1">ID:</span>
               </div>
               <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
             </div>
-  
-  
+    
             <div class="mb-3">
               <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="escuela" placeholder="campo obligatorio" formControlName="escuela" 
+              <input type="text" class="form-control" [readOnly]="disabledValue" id="escuela" placeholder="campo obligatorio" formControlName="escuela" 
               [ngClass]="{'is-invalid': form.get('escuela')?.errors && form.get('escuela')?.touched, 'is-valid': form.get('escuela')?.errors && form.get('escuela')?.touched}">
               <p class="text-danger"
                 *ngIf="form.get('escuela')?.touched && form.get('escuela')?.errors?.['required']">
@@ -42,7 +37,7 @@
   
             <div class="mb-3">
               <label for="tipo" class="form-label">nivel educativo</label>
-              <input type="text" class="form-control" id="descripcion" formControlName="descripcion" placeholder="campo obligatorio"
+              <input type="text" class="form-control" [readOnly]="disabledValue" id="descripcion" formControlName="descripcion" placeholder="campo obligatorio"
               [ngClass]="{'is-invalid': form.get('descripcion')?.errors && form.get('descripcion')?.touched, 'is-valid': form.get('descripcion')?.errors && form.get('descripcion')?.touched}">
               <p class="text-danger"
                 *ngIf="form.get('descripcion')?.touched && form.get('descripcion')?.errors?.['required']">
@@ -52,17 +47,17 @@
   
               <div class="mb-3">
                 <label for="titulo" class="form-label">titulo</label>
-                <input type="text" class="form-control" id="titulo" placeholder="campo obligatorio" formControlName="titulo">
+                <input type="text" class="form-control" [readOnly]="disabledValue" id="titulo" placeholder="campo obligatorio" formControlName="titulo">
               </div>
   
               <div class="mb-3">
                 <label for="fecha_inicio" class="form-label">fecha de inicio</label>
-                <input type="date" class="form-control" id="fecha_inicio" placeholder="campo obligatorio" formControlName="fecha_inicio">
+                <input type="date" class="form-control" [readOnly]="disabledValue" id="fecha_inicio" placeholder="campo obligatorio" formControlName="fecha_inicio">
               </div>
   
               <div class="mb-3">
                 <label for="fecha_fin" class="form-label">fecha de finalización</label>
-                <input type="date" class="form-control" id="fecha_fin" placeholder="campo obligatorio" formControlName="fecha_fin">
+                <input type="date" class="form-control" [readOnly]="disabledValue" id="fecha_fin" placeholder="campo obligatorio" formControlName="fecha_fin">
               </div>          
                 
             <div class="modal-footer">

@@ -12,6 +12,7 @@ export class ModalEdicionHabiComponent {
 
   form: FormGroup;
   habilidades:Habilidade[] = [];
+  disabledValue = true;
 
   constructor(private formBuilder: FormBuilder, public habilidadservice:HabilidadService) {
     
@@ -39,6 +40,7 @@ export class ModalEdicionHabiComponent {
       {
         next: (info) => {
           this.form.setValue(info);
+          this.disabledValue=false;
         },
         error: (e) => {
           console.error(e)

@@ -28,6 +28,7 @@ export class SechabeditComponent implements OnInit {
         () => {
           alert("Se elimino la Habilidad")
           this.cargarHabilidad()
+          window.location.reload()
         })
         }
       }
