@@ -37,6 +37,7 @@ import { ModalEdicionHabiComponent } from './edicion/modal-edicion-habi/modal-ed
 import { ModalEdicionTrabajoComponent } from './edicion/modal-edicion-trabajo/modal-edicion-trabajo.component';
 import { ModaledicionproyectosComponent } from './edicion/modaledicionproyectos/modaledicionproyectos.component';
 import { ModaledicionsobremiComponent } from './edicion/modaledicionsobremi/modaledicionsobremi.component';
+import { ContactoComponent } from './component/contacto/contacto.component';
  
 
 @NgModule({
@@ -71,7 +72,8 @@ import { ModaledicionsobremiComponent } from './edicion/modaledicionsobremi/moda
     ModalEdicionHabiComponent,
     ModalEdicionTrabajoComponent,
     ModaledicionproyectosComponent,
-    ModaledicionsobremiComponent    
+    ModaledicionsobremiComponent,
+    ContactoComponent    
   ],
   imports: [
     BrowserModule,

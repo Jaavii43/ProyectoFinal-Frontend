@@ -64,9 +64,8 @@ export class ModalEdicionTrabajoComponent {
           error: (e) => console.error(e),
           complete: () => console.info('complete')
         });      
-      console.log("Se modificó correctamente el item");
-      window.location.reload();
- 
+        window.location.reload();
+        console.log("Se modificó correctamente el item");
   }
 
   borrar(id: number) {
