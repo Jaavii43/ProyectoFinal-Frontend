@@ -13,7 +13,7 @@
             <h2><b style="letter-spacing: 0px;"><span style="font-size: 15px; background: dimgrey;">Pequeña descripcion del mismo</span></b></h2>
             <h3><b style="letter-spacing: 0px;"><span style="font-size: 18px;">{{proyectos.tipo}}</span></b></h3>
           </div>
-          <div class="col-4">
+          <div *ngIf="element == proyectos.valor" class="col-4">
             <div id="carouselProyectos" class="carousel slide carousel-fade">
               <div class="carousel-inner">
                 <div class="carousel-item active">

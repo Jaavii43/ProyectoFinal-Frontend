@@ -11,6 +11,7 @@ import { ProyectosService } from 'src/app/services/proyectos.service';
 export class ProyectosComponent implements OnInit {
 
   proyecto: Proyectos[]=[];
+  element = false;
   constructor(public proyectosservice:ProyectosService) { }
 
   ngOnInit(): void {
