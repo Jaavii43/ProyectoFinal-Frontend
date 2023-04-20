@@ -14,6 +14,7 @@ export class ModagrproyComponent implements OnInit {
   tipo:''="";
   sector:''="";
   tiempo_ejecucion:''="";
+  valor:boolean;
   
   constructor(private formBuilder: FormBuilder, private proyectosservice:ProyectosService) {
 
@@ -21,6 +22,7 @@ export class ModagrproyComponent implements OnInit {
       tipo: ['', [Validators.required]],
       sector: ['',[Validators.required]],
       tiempo_ejecucion: ['', [Validators.required]],
+      valor: ['', [Validators.required]],
       })
       
    }
@@ -39,9 +41,13 @@ export class ModagrproyComponent implements OnInit {
   get Tiempo_ejecucion(){
     return this.form.get("tiempo_ejecucion");
   }
+   
+  get Valor(){
+    return this.form.get("valor");
+  }
 
   onCreate():void{
-    const proy =new Proyectos(this.tipo, this.sector, this.tiempo_ejecucion);
+    const proy =new Proyectos(this.tipo, this.sector, this.tiempo_ejecucion, this.valor);
     this.proyectosservice.save(proy).subscribe(
       bd=>{
         
